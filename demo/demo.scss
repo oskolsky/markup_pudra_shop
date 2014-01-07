@@ -1,0 +1,21 @@
+.demo {
+  margin-left: 6rem;
+  
+  li:not(:last-child) {margin-bottom: 1rem;}
+
+  ol {
+    counter-reset: list;
+    > li {
+      position: relative;
+      &::before {
+        counter-increment: list;
+        content: counter(list) ".";
+        position: absolute;
+        top: 0;
+        right: 100%;
+        margin-right: .5rem;
+        color: #ccc;
+      }
+    }
+  }
+}

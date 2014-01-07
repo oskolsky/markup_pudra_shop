@@ -1,0 +1,60 @@
+@if $grid == "responsive-auto" {
+
+  body {min-width: (nth($min-width-list, 1) + 20);}
+
+  .tx {
+    @for $i from 2 through 4 {
+      &.__cols-#{$i} { @include prefixes(column-count, $i); }
+    }
+  }
+  
+}
+
+@if $grid == "responsive-auto" or $grid == "responsive-manual" {
+
+  html {font-size: nth($root-font-size-list, 1);}
+  
+  body {
+    font-size:   nth($base-font-size-list, 1);
+    line-height: nth($base-line-height-list, 1);
+  }
+
+
+
+  //****************************************************************************************************
+  //
+  // .. HEADINGS
+  //
+  //****************************************************************************************************
+  h1, .alpha {
+    font-size:   nth($h1-font-size-list, 1);
+    font-weight: nth($h1-font-weight-list, 1); 
+    line-height: nth($h1-line-height-list, 1);
+  }
+  h2, .beta {
+    font-size:   nth($h2-font-size-list, 1);
+    font-weight: nth($h2-font-weight-list, 1);
+    line-height: nth($h2-line-height-list, 1);
+  }
+  h3, .gamma {
+    font-size:   nth($h3-font-size-list, 1);
+    font-weight: nth($h3-font-weight-list, 1);
+    line-height: nth($h3-line-height-list, 1);
+  }
+  h4, .delta {
+    font-size:   nth($h4-font-size-list, 1);
+    font-weight: nth($h4-font-weight-list, 1);
+    line-height: nth($h4-line-height-list, 1);
+  }
+  h5, .epsilon {
+    font-size:   nth($h5-font-size-list, 1);
+    font-weight: nth($h5-font-weight-list, 1);
+    line-height: nth($h5-line-height-list, 1);
+  }
+  h6, .zeta {
+    font-size:   nth($h6-font-size-list, 1);
+    font-weight: nth($h6-font-weight-list, 1);
+    line-height: nth($h6-line-height-list, 1);
+  }
+
+}

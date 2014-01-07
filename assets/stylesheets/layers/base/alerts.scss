@@ -1,0 +1,11 @@
+.alert {
+  position: relative;
+  @include prefixes(box-sizing, border-box);
+}
+  .alert_close {position: absolute;}
+
+//
+// .. Disabled JavaScript
+//
+.alert.__no-js {display: none;}
+.no-js .alert.__no-js {display: block;} // .. if disabled javascript

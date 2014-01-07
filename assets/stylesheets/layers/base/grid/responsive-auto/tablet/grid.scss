@@ -1,0 +1,67 @@
+@if $grid == "responsive-auto" {
+  
+  //****************************************************************************************************
+  //
+  // .. GRID
+  //
+  //****************************************************************************************************
+  @if $grid-responsive-auto-col-qty == 8 {
+
+  }
+
+  @if $grid-responsive-auto-col-qty == 12 {
+
+    //
+    // .. Grid
+    //
+    .grid {
+      &.__no-gutter {
+        margin-bottom: 0;
+        margin-left: 0;
+        > .grid-i[class*="grid-"] {
+          margin-bottom: 0;
+          margin-left: 0;
+        }
+        @for $i from 1 through 6 {
+          > .grid-i.__grid-#{$i} {width: 50%;}
+        }
+        @for $i from 7 through 12 {
+          > .grid-i.__grid-#{$i} {width: 100%;}
+        }
+      }
+      margin-bottom: -$grid-responsive-col-indent;
+      margin-left: -$grid-responsive-col-gutter#{"%"};
+      > .grid-i[class*="grid-"] {
+        margin-bottom: $grid-responsive-col-indent;
+        margin-left: $grid-responsive-col-gutter#{"%"};
+      }
+      > .grid-i.__grid-1,
+      > .grid-i.__grid-2  {width: 16.666% - $grid-responsive-col-gutter;}
+      > .grid-i.__grid-3,
+      > .grid-i.__grid-4  {width: 33.333% - $grid-responsive-col-gutter;}
+      > .grid-i.__grid-5,
+      > .grid-i.__grid-6,
+      > .grid-i.__grid-7  {width: 50% - $grid-responsive-col-gutter;}
+      > .grid-i.__grid-8,  
+      > .grid-i.__grid-9  {width: 66.666% - $grid-responsive-col-gutter;}
+      > .grid-i.__grid-10,
+      > .grid-i.__grid-11 {width: 83.333% - $grid-responsive-col-gutter;}
+      > .grid-i.__grid-12 {width: 100% - $grid-responsive-col-gutter;}
+    }
+      
+    @for $i from 1 through 6 {
+      .grid-i.__grid-#{$i} {width: 50%;}
+    }
+    @for $i from 7 through 12 {
+      .grid-i.__grid-#{$i} {width: 100%;}
+    }
+
+    //
+    // .. Prefix, Suffix
+    //
+    .grid-i[class*="__prefix-"] {margin-left: 0;}
+    .grid-i[class*="__suffix-"] {margin-right: 0;}
+    
+  }
+
+}

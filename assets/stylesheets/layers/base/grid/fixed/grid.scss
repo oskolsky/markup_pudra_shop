@@ -1,0 +1,68 @@
+@mixin grid-fixed($classname, $property, $result) {
+  @for $i from 1 through $grid-fixed-col-qty {
+    $result: $result + $grid-fixed-col-width + $grid-fixed-col-gutter;
+    #{$classname}-#{$i} {
+      #{$property}: #{$result}px; 
+    }
+  }
+}
+
+$grid-fixed-ctn-width: ($grid-fixed-col-width + $grid-fixed-col-gutter) * $grid-fixed-col-qty;
+
+@if $grid == "fixed" {
+
+  //****************************************************************************************************
+  //
+  // .. GRID
+  //
+  //****************************************************************************************************
+  //
+  // .. Grid
+  //
+  .grid {
+    &.__no-gutter {
+      width: #{$grid-fixed-ctn-width}px;
+      margin-bottom: 0;
+      margin-left: -#{$grid-fixed-col-gutter / 2}px;
+      > .grid-i[class*="__grid-"] {
+        margin-bottom: 0;
+        margin-left: 0;
+      }
+      @include grid-fixed("> .grid-i.__grid", "width", 0);
+    }
+    margin-bottom: -#{$grid-fixed-col-indent}px;
+    margin-left: -#{$grid-fixed-col-gutter}px;
+    > .grid-i[class*="__grid-"] {
+      margin-bottom: #{$grid-fixed-col-indent}px;
+      margin-left: #{$grid-fixed-col-gutter}px;
+    }
+  }
+  @include grid-fixed(".grid-i.__grid", "width", -$grid-fixed-col-gutter);
+
+  //
+  // .. Prefix
+  //
+  .grid {
+    &.__no-gutter {
+      margin-bottom: 0;
+      margin-left: -#{$grid-fixed-col-gutter / 2};
+      @include grid-fixed("> .grid-i.__prefix", "margin-left", 0);
+    }
+    @include grid-fixed(".grid-i.__prefix", "margin-left", $grid-fixed-col-gutter);
+  }
+  @include grid-fixed(".grid-i.__prefix", "margin-left", 0);
+  
+  //
+  // .. Suffix
+  //
+  .grid {
+    &.__no-gutter {
+      margin-bottom: 0;
+      margin-left: -#{$grid-fixed-col-gutter / 2};
+      @include grid-fixed("> .grid-i.__suffix", "margin-right", 0);
+    }
+    @include grid-fixed(".grid-i.__suffix", "margin-right", 0);
+  }
+  @include grid-fixed(".grid-i.__suffix", "margin-right", 0);
+
+}

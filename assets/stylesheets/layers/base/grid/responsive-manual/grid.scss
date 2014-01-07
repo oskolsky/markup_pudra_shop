@@ -1,0 +1,359 @@
+@mixin grid-responsive-manual($media: "", $indent: "") {
+  &.__#{$media}grid-1-1   {width: 100% + $indent;}
+
+  &.__#{$media}grid-1-2   {width: 50% + $indent;}
+
+  &.__#{$media}grid-1-3   {width: 33.333% + $indent;}
+  &.__#{$media}grid-2-3   {width: 66.666% + $indent;}
+
+  &.__#{$media}grid-1-4   {width: 25% + $indent;}
+  &.__#{$media}grid-2-4   {width: 50% + $indent;} // .. 1/2
+  &.__#{$media}grid-3-4   {width: 75% + $indent;}
+
+  &.__#{$media}grid-1-5   {width: 20% + $indent;}
+  &.__#{$media}grid-2-5   {width: 40% + $indent;}
+  &.__#{$media}grid-3-5   {width: 60% + $indent;}
+  &.__#{$media}grid-4-5   {width: 80% + $indent;}
+
+  &.__#{$media}grid-1-6   {width: 16.666% + $indent;}
+  &.__#{$media}grid-2-6   {width: 33.333% + $indent;} // .. 1/3
+  &.__#{$media}grid-3-6   {width: 50% + $indent;} // .. 1/2
+  &.__#{$media}grid-4-6   {width: 66.666% + $indent;} // .. 2/3
+  &.__#{$media}grid-5-6   {width: 83.333% + $indent;}
+  
+  &.__#{$media}grid-1-7   {width: 14.2857% + $indent;}
+  &.__#{$media}grid-2-7   {width: 28.5714% + $indent;}
+  &.__#{$media}grid-3-7   {width: 42.8571% + $indent;}
+  &.__#{$media}grid-4-7   {width: 57.1428% + $indent;}
+  &.__#{$media}grid-5-7   {width: 71.4285% + $indent;}
+  &.__#{$media}grid-6-7   {width: 85.7142% + $indent;}
+
+  &.__#{$media}grid-1-8   {width: 12.5% + $indent;}
+  &.__#{$media}grid-2-8   {width: 25% + $indent;} // .. 1/4
+  &.__#{$media}grid-3-8   {width: 37.5% + $indent;}
+  &.__#{$media}grid-4-8   {width: 50% + $indent;} // .. 1/2
+  &.__#{$media}grid-5-8   {width: 62.5% + $indent;}
+  &.__#{$media}grid-6-8   {width: 75% + $indent;} // .. 3/4
+  &.__#{$media}grid-7-8   {width: 87.5% + $indent;}
+
+  &.__#{$media}grid-1-9   {width: 11.111% + $indent;}
+  &.__#{$media}grid-2-9   {width: 22.222% + $indent;}
+  &.__#{$media}grid-3-9   {width: 33.333% + $indent;} // .. 1/3
+  &.__#{$media}grid-4-9   {width: 44.444% + $indent;}
+  &.__#{$media}grid-5-9   {width: 55.555% + $indent;}
+  &.__#{$media}grid-6-9   {width: 66.666% + $indent;} // .. 2/3
+  &.__#{$media}grid-7-9   {width: 77.777% + $indent;}
+  &.__#{$media}grid-8-9   {width: 88.888% + $indent;}
+
+  &.__#{$media}grid-1-10  {width: 10% + $indent;}
+  &.__#{$media}grid-2-10  {width: 20% + $indent;} // .. 1/5
+  &.__#{$media}grid-3-10  {width: 30% + $indent;}
+  &.__#{$media}grid-4-10  {width: 40% + $indent;} // .. 2/5
+  &.__#{$media}grid-5-10  {width: 50% + $indent;} // .. 1/2
+  &.__#{$media}grid-6-10  {width: 60% + $indent;} // .. 3/5
+  &.__#{$media}grid-7-10  {width: 70% + $indent;}
+  &.__#{$media}grid-8-10  {width: 80% + $indent;} // .. 4/5
+  &.__#{$media}grid-9-10  {width: 90% + $indent;}
+  
+  &.__#{$media}grid-1-11  {width: 9.09% + $indent;}
+  &.__#{$media}grid-2-11  {width: 18.18% + $indent;}
+  &.__#{$media}grid-3-11  {width: 27.27% + $indent;}
+  &.__#{$media}grid-4-11  {width: 36.36% + $indent;}
+  &.__#{$media}grid-5-11  {width: 45.45% + $indent;}
+  &.__#{$media}grid-6-11  {width: 54.54% + $indent;}
+  &.__#{$media}grid-7-11  {width: 63.63% + $indent;}
+  &.__#{$media}grid-8-11  {width: 72.72% + $indent;}
+  &.__#{$media}grid-9-11  {width: 81.81% + $indent;}
+  &.__#{$media}grid-10-11 {width: 90.9% + $indent;}
+
+  &.__#{$media}grid-1-12  {width: 8.333% + $indent;}
+  &.__#{$media}grid-2-12  {width: 16.666% + $indent;} // .. 1/6
+  &.__#{$media}grid-3-12  {width: 25% + $indent;} // .. 1/4
+  &.__#{$media}grid-4-12  {width: 33.333% + $indent;} // .. 1/3
+  &.__#{$media}grid-5-12  {width: 41.666% + $indent;}
+  &.__#{$media}grid-6-12  {width: 50% + $indent;} // .. 1/2
+  &.__#{$media}grid-7-12  {width: 58.333% + $indent;}
+  &.__#{$media}grid-8-12  {width: 66.666% + $indent;} // .. 2/3
+  &.__#{$media}grid-9-12  {width: 75% + $indent;} // .. 3/4
+  &.__#{$media}grid-10-12 {width: 83.333% + $indent;} // .. 5/6
+  &.__#{$media}grid-11-12 {width: 91.666% + $indent;}
+}
+
+@mixin prefix-responsive-manual($media: "", $indent: "") {
+  &.__#{$media}prefix-1-1   {margin-left: 100% + $indent;}
+
+  &.__#{$media}prefix-1-2   {margin-left: 50% + $indent;}
+
+  &.__#{$media}prefix-1-3   {margin-left: 33.333% + $indent;}
+  &.__#{$media}prefix-2-3   {margin-left: 66.666% + $indent;}
+
+  &.__#{$media}prefix-1-4   {margin-left: 25% + $indent;}
+  &.__#{$media}prefix-2-4   {margin-left: 50% + $indent;} // .. 1/2
+  &.__#{$media}prefix-3-4   {margin-left: 75% + $indent;}
+
+  &.__#{$media}prefix-1-5   {margin-left: 20% + $indent;}
+  &.__#{$media}prefix-2-5   {margin-left: 40% + $indent;}
+  &.__#{$media}prefix-3-5   {margin-left: 60% + $indent;}
+  &.__#{$media}prefix-4-5   {margin-left: 80% + $indent;}
+
+  &.__#{$media}prefix-1-6   {margin-left: 16.666% + $indent;}
+  &.__#{$media}prefix-2-6   {margin-left: 33.333% + $indent;} // .. 1/3
+  &.__#{$media}prefix-3-6   {margin-left: 50% + $indent;} // .. 1/2
+  &.__#{$media}prefix-4-6   {margin-left: 66.666% + $indent;} // .. 2/3
+  &.__#{$media}prefix-5-6   {margin-left: 83.333% + $indent;}
+
+  &.__#{$media}prefix-1-7   {margin-left: 14.2857% + $indent;}
+  &.__#{$media}prefix-2-7   {margin-left: 28.5714% + $indent;}
+  &.__#{$media}prefix-3-7   {margin-left: 42.8571% + $indent;}
+  &.__#{$media}prefix-4-7   {margin-left: 57.1428% + $indent;}
+  &.__#{$media}prefix-5-7   {margin-left: 71.4285% + $indent;}
+  &.__#{$media}prefix-6-7   {margin-left: 85.7142% + $indent;}
+
+  &.__#{$media}prefix-1-8   {margin-left: 12.5% + $indent;}
+  &.__#{$media}prefix-2-8   {margin-left: 25% + $indent;} // .. 1/4
+  &.__#{$media}prefix-3-8   {margin-left: 37.5% + $indent;}
+  &.__#{$media}prefix-4-8   {margin-left: 50% + $indent;} // .. 1/2
+  &.__#{$media}prefix-5-8   {margin-left: 62.5% + $indent;}
+  &.__#{$media}prefix-6-8   {margin-left: 75% + $indent;} // .. 3/4
+  &.__#{$media}prefix-7-8   {margin-left: 87.5% + $indent;}
+  
+  &.__#{$media}prefix-1-9   {margin-left: 11.111% + $indent;}
+  &.__#{$media}prefix-2-9   {margin-left: 22.222% + $indent;}
+  &.__#{$media}prefix-3-9   {margin-left: 33.333% + $indent;} // .. 1/3
+  &.__#{$media}prefix-4-9   {margin-left: 44.444% + $indent;}
+  &.__#{$media}prefix-5-9   {margin-left: 55.555% + $indent;}
+  &.__#{$media}prefix-6-9   {margin-left: 66.666% + $indent;} // .. 2/3
+  &.__#{$media}prefix-7-9   {margin-left: 77.777% + $indent;}
+  &.__#{$media}prefix-8-9   {margin-left: 88.888% + $indent;}
+
+  &.__#{$media}prefix-1-10  {margin-left: 10% + $indent;}
+  &.__#{$media}prefix-2-10  {margin-left: 20% + $indent;} // .. 1/5
+  &.__#{$media}prefix-3-10  {margin-left: 30% + $indent;}
+  &.__#{$media}prefix-4-10  {margin-left: 40% + $indent;} // .. 2/5
+  &.__#{$media}prefix-5-10  {margin-left: 50% + $indent;} // .. 1/2
+  &.__#{$media}prefix-6-10  {margin-left: 60% + $indent;} // .. 3/5
+  &.__#{$media}prefix-7-10  {margin-left: 70% + $indent;}
+  &.__#{$media}prefix-8-10  {margin-left: 80% + $indent;} // .. 4/5
+  &.__#{$media}prefix-9-10  {margin-left: 90% + $indent;}
+  
+  &.__#{$media}prefix-1-11  {margin-left: 9.09% + $indent;}
+  &.__#{$media}prefix-2-11  {margin-left: 18.18% + $indent;}
+  &.__#{$media}prefix-3-11  {margin-left: 27.27% + $indent;}
+  &.__#{$media}prefix-4-11  {margin-left: 36.36% + $indent;}
+  &.__#{$media}prefix-5-11  {margin-left: 45.45% + $indent;}
+  &.__#{$media}prefix-6-11  {margin-left: 54.54% + $indent;}
+  &.__#{$media}prefix-7-11  {margin-left: 63.63% + $indent;}
+  &.__#{$media}prefix-8-11  {margin-left: 72.72% + $indent;}
+  &.__#{$media}prefix-9-11  {margin-left: 81.81% + $indent;}
+  &.__#{$media}prefix-10-11 {margin-left: 90.9% + $indent;}
+
+  &.__#{$media}prefix-1-12  {margin-left: 8.333% + $indent;}
+  &.__#{$media}prefix-2-12  {margin-left: 16.666% + $indent;} // .. 1/6
+  &.__#{$media}prefix-3-12  {margin-left: 25% + $indent;} // .. 1/4
+  &.__#{$media}prefix-4-12  {margin-left: 33.333% + $indent;} // .. 1/3
+  &.__#{$media}prefix-5-12  {margin-left: 41.666% }
+  &.__#{$media}prefix-6-12  {margin-left: 50% + $indent;} // .. 1/2
+  &.__#{$media}prefix-7-12  {margin-left: 58.333% + $indent;}
+  &.__#{$media}prefix-8-12  {margin-left: 66.666% + $indent;} // .. 2/3
+  &.__#{$media}prefix-9-12  {margin-left: 75% + $indent;} // .. 3/4
+  &.__#{$media}prefix-10-12 {margin-left: 83.333% + $indent;} // .. 5/6
+  &.__#{$media}prefix-11-12 {margin-left: 91.666% + $indent;}
+}
+
+@mixin suffix-responsive-manual($media: "", $indent: "") {
+  &.__#{$media}suffix-1-1   {margin-right: 100% + $indent;}
+
+  &.__#{$media}suffix-1-2   {margin-right: 50% + $indent;}
+
+  &.__#{$media}suffix-1-3   {margin-right: 33.333% + $indent;}
+  &.__#{$media}suffix-2-3   {margin-right: 66.666% + $indent;}
+
+  &.__#{$media}suffix-1-4   {margin-right: 25% + $indent;}
+  &.__#{$media}suffix-2-4   {margin-right: 50% + $indent;} // .. 1/2
+  &.__#{$media}suffix-3-4   {margin-right: 75% + $indent;}
+
+  &.__#{$media}suffix-1-5   {margin-right: 20% + $indent;}
+  &.__#{$media}suffix-2-5   {margin-right: 40% + $indent;}
+  &.__#{$media}suffix-3-5   {margin-right: 60% + $indent;}
+  &.__#{$media}suffix-4-5   {margin-right: 80% + $indent;}
+
+  &.__#{$media}suffix-1-6   {margin-right: 16.666% + $indent;}
+  &.__#{$media}suffix-2-6   {margin-right: 33.333% + $indent;} // .. 1/3
+  &.__#{$media}suffix-3-6   {margin-right: 50% + $indent;} // .. 1/2
+  &.__#{$media}suffix-4-6   {margin-right: 66.666% + $indent;} // .. 2/3
+  &.__#{$media}suffix-5-6   {margin-right: 83.333% + $indent;}
+  
+  &.__#{$media}suffix-1-7   {margin-right: 14.2857% + $indent;}
+  &.__#{$media}suffix-2-7   {margin-right: 28.5714% + $indent;}
+  &.__#{$media}suffix-3-7   {margin-right: 42.8571% + $indent;}
+  &.__#{$media}suffix-4-7   {margin-right: 57.1428% + $indent;}
+  &.__#{$media}suffix-5-7   {margin-right: 71.4285% + $indent;}
+  &.__#{$media}suffix-6-7   {margin-right: 85.7142% + $indent;}
+
+  &.__#{$media}suffix-1-8   {margin-right: 12.5% + $indent;}
+  &.__#{$media}suffix-2-8   {margin-right: 25% + $indent;} // .. 1/4
+  &.__#{$media}suffix-3-8   {margin-right: 37.5% + $indent;}
+  &.__#{$media}suffix-4-8   {margin-right: 50% + $indent;} // .. 1/2
+  &.__#{$media}suffix-5-8   {margin-right: 62.5% + $indent;}
+  &.__#{$media}suffix-6-8   {margin-right: 75% + $indent;} // .. 3/4
+  &.__#{$media}suffix-7-8   {margin-right: 87.5% + $indent;}
+  
+  &.__#{$media}suffix-1-9   {margin-right: 11.111% + $indent;}
+  &.__#{$media}suffix-2-9   {margin-right: 22.222% + $indent;}
+  &.__#{$media}suffix-3-9   {margin-right: 33.333% + $indent;} // .. 1/3
+  &.__#{$media}suffix-4-9   {margin-right: 44.444% + $indent;}
+  &.__#{$media}suffix-5-9   {margin-right: 55.555% + $indent;}
+  &.__#{$media}suffix-6-9   {margin-right: 66.666% + $indent;} // .. 2/3
+  &.__#{$media}suffix-7-9   {margin-right: 77.777% + $indent;}
+  &.__#{$media}suffix-8-9   {margin-right: 88.888% + $indent;}
+
+  &.__#{$media}suffix-1-10  {margin-right: 10% + $indent;}
+  &.__#{$media}suffix-2-10  {margin-right: 20% + $indent;} // .. 1/5
+  &.__#{$media}suffix-3-10  {margin-right: 30% + $indent;}
+  &.__#{$media}suffix-4-10  {margin-right: 40% + $indent;} // .. 2/5
+  &.__#{$media}suffix-5-10  {margin-right: 50% + $indent;} // .. 1/2
+  &.__#{$media}suffix-6-10  {margin-right: 60% + $indent;} // .. 3/5
+  &.__#{$media}suffix-7-10  {margin-right: 70% + $indent;}
+  &.__#{$media}suffix-8-10  {margin-right: 80% + $indent;} // .. 4/5
+  &.__#{$media}suffix-9-10  {margin-right: 90% + $indent;}
+  
+  &.__#{$media}suffix-1-11  {margin-right: 9.09% + $indent;}
+  &.__#{$media}suffix-2-11  {margin-right: 18.18% + $indent;}
+  &.__#{$media}suffix-3-11  {margin-right: 27.27% + $indent;}
+  &.__#{$media}suffix-4-11  {margin-right: 36.36% + $indent;}
+  &.__#{$media}suffix-5-11  {margin-right: 45.45% + $indent;}
+  &.__#{$media}suffix-6-11  {margin-right: 54.54% + $indent;}
+  &.__#{$media}suffix-7-11  {margin-right: 63.63% + $indent;}
+  &.__#{$media}suffix-8-11  {margin-right: 72.72% + $indent;}
+  &.__#{$media}suffix-9-11  {margin-right: 81.81% + $indent;}
+  &.__#{$media}suffix-10-11 {margin-right: 90.9% + $indent;}
+
+  &.__#{$media}suffix-1-12  {margin-right: 8.333% + $indent;}
+  &.__#{$media}suffix-2-12  {margin-right: 16.666% + $indent;} // .. 1/6
+  &.__#{$media}suffix-3-12  {margin-right: 25% + $indent;} // .. 1/4
+  &.__#{$media}suffix-4-12  {margin-right: 33.333% + $indent;} // .. 1/3
+  &.__#{$media}suffix-5-12  {margin-right: 41.666% }
+  &.__#{$media}suffix-6-12  {margin-right: 50% + $indent;} // .. 1/2
+  &.__#{$media}suffix-7-12  {margin-right: 58.333% + $indent;}
+  &.__#{$media}suffix-8-12  {margin-right: 66.666% + $indent;} // .. 2/3
+  &.__#{$media}suffix-9-12  {margin-right: 75% + $indent;} // .. 3/4
+  &.__#{$media}suffix-10-12 {margin-right: 83.333% + $indent;} // .. 5/6
+  &.__#{$media}suffix-11-12 {margin-right: 91.666% + $indent;}
+}
+
+@mixin cols-responsive-manual($media: "") {
+  @for $i from 2 through 4 {
+    &.__#{$media}cols-#{$i} { @include prefixes(column-count, $i); }
+  }
+}
+
+@if $grid == "responsive-manual" {
+  
+  //****************************************************************************************************
+  //
+  // .. GRID
+  //
+  //****************************************************************************************************
+  .grid {
+    &.__no-gutter {
+      margin-bottom: 0;
+      margin-left: 0;
+      > .grid-i {
+        margin-bottom: 0;
+        margin-left: 0;
+      }
+    }
+    margin-bottom: -$grid-responsive-col-indent;
+    margin-left: -$grid-responsive-col-gutter#{"%"};
+    > .grid-i {
+      margin-bottom: $grid-responsive-col-indent;
+      margin-left: $grid-responsive-col-gutter#{"%"};
+    }
+  }
+  
+  //
+  // .. Desktop
+  //
+  @include media-query(desktop) {
+    .grid {
+      &.__no-gutter {
+        > .grid-i {
+          @include grid-responsive-manual("desktop-", 0);
+          @include prefix-responsive-manual("desktop-", 0);
+          @include suffix-responsive-manual("desktop-", 0);
+        }
+      }
+      > .grid-i {
+        @include grid-responsive-manual("desktop-", -$grid-responsive-col-gutter);
+        @include prefix-responsive-manual("desktop-", $grid-responsive-col-gutter);
+        @include suffix-responsive-manual("desktop-", 0);
+      }
+    }
+
+    .grid-i {
+      @include grid-responsive-manual("desktop-", 0);
+      @include prefix-responsive-manual("desktop-", 0);
+      @include suffix-responsive-manual("desktop-", 0);
+    }
+
+    .tx { @include cols-responsive-manual("desktop-"); }
+  }
+
+  //
+  // .. Tablet
+  //
+  @include media-query(tablet) {
+    .grid {
+      &.__no-gutter {
+        > .grid-i {
+          @include grid-responsive-manual("tablet-", 0);
+          @include prefix-responsive-manual("tablet-", 0);
+          @include suffix-responsive-manual("tablet-", 0);
+        }
+      }
+      > .grid-i {
+        @include grid-responsive-manual("tablet-", -$grid-responsive-col-gutter);
+        @include prefix-responsive-manual("tablet-", $grid-responsive-col-gutter);
+        @include suffix-responsive-manual("tablet-", 0);
+      }
+      
+    }
+
+    .grid-i {
+      @include grid-responsive-manual("tablet-", 0);
+      @include prefix-responsive-manual("tablet-", 0);
+      @include suffix-responsive-manual("tablet-", 0);
+    }
+
+    .tx { @include cols-responsive-manual("tablet-"); }
+  }
+
+  //
+  // .. Phone
+  //
+  @include media-query(phone) {
+    .grid {
+      &.__no-gutter {
+        > .grid-i {
+          @include grid-responsive-manual("phone-", 0);
+          @include prefix-responsive-manual("phone-", 0);
+          @include suffix-responsive-manual("phone-", 0);
+        }
+      }
+      > .grid-i {
+        @include grid-responsive-manual("phone-", -$grid-responsive-col-gutter);
+        @include prefix-responsive-manual("phone-", $grid-responsive-col-gutter);
+        @include suffix-responsive-manual("phone-", 0);
+      }
+    }
+
+    .grid-i {
+      @include grid-responsive-manual("phone-", 0);
+      @include prefix-responsive-manual("phone-", 0);
+      @include suffix-responsive-manual("phone-", 0);
+    }
+
+    .tx { @include cols-responsive-manual("phone-"); }
+  }
+
+}

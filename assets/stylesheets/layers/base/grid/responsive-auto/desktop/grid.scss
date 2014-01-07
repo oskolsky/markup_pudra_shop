@@ -1,0 +1,76 @@
+@mixin grid-responsive-auto-column-qty-12($child: "", $classname: "", $property: "", $indent: "") {
+  #{$child}#{$classname}1  {#{$property}:  8.333% + $indent;}
+  #{$child}#{$classname}2  {#{$property}: 16.666% + $indent;}
+  #{$child}#{$classname}3  {#{$property}: 25% + $indent;}
+  #{$child}#{$classname}4  {#{$property}: 33.333% + $indent;}
+  #{$child}#{$classname}5  {#{$property}: 41.666% + $indent;}
+  #{$child}#{$classname}6  {#{$property}: 50% + $indent;}
+  #{$child}#{$classname}7  {#{$property}: 58.333% + $indent;}
+  #{$child}#{$classname}8  {#{$property}: 66.666% + $indent;}
+  #{$child}#{$classname}9  {#{$property}: 75% + $indent;}
+  #{$child}#{$classname}10 {#{$property}: 83.333% + $indent;}
+  #{$child}#{$classname}11 {#{$property}: 91.666% + $indent;}
+  #{$child}#{$classname}12 {#{$property}: 100% + $indent;}
+}
+
+@if $grid == "responsive-auto" {
+
+  //****************************************************************************************************
+  //
+  // .. GRID
+  //
+  //****************************************************************************************************
+  @if $grid-responsive-auto-col-qty == 8 {
+
+  }
+
+  @if $grid-responsive-auto-col-qty == 12 {
+    
+    //
+    // .. Grid
+    //
+    .grid {
+      &.__no-gutter {
+        margin-bottom: 0;
+        margin-left: 0;
+        > .grid-i[class*="__grid-"] {
+          margin-bottom: 0;
+          margin-left: 0;
+        }
+        @include grid-responsive-auto-column-qty-12("> ", ".grid-i.__grid-", "width", 0);
+      }
+      margin-bottom: -$grid-responsive-col-indent;
+      margin-left: -$grid-responsive-col-gutter#{"%"};
+      > .grid-i[class*="__grid-"] {
+        margin-bottom: $grid-responsive-col-indent;
+        margin-left: $grid-responsive-col-gutter#{"%"};
+      }
+      @include grid-responsive-auto-column-qty-12("> ", ".grid-i.__grid-", "width", -$grid-responsive-col-gutter);
+    }
+    @include grid-responsive-auto-column-qty-12("", ".grid-i.__grid-", "width", 0);
+
+    //
+    // .. Prefix
+    //
+    .grid {
+      &.__no-gutter {
+        @include grid-responsive-auto-column-qty-12("> ", ".grid-i.__prefix-", "margin-left", 0);
+      }
+      @include grid-responsive-auto-column-qty-12("> ", ".grid-i.__prefix-", "margin-left", $grid-responsive-col-gutter);
+    }
+    @include grid-responsive-auto-column-qty-12("", ".grid-i.__prefix-", "margin-left", 0);
+
+    //
+    // .. Suffix
+    //
+    .grid {
+      &.__no-gutter {
+        @include grid-responsive-auto-column-qty-12("> ", ".grid-i.__suffix-", "margin-right", 0);
+      }
+      @include grid-responsive-auto-column-qty-12("> ", ".grid-i.__suffix-", "margin-right", 0);
+    }
+    @include grid-responsive-auto-column-qty-12("", ".grid-i.__suffix-", "margin-right", 0);
+    
+  }
+
+}

@@ -1,0 +1,13 @@
+@if $grid == "responsive-auto" or $grid == "responsive-manual" {
+  
+  .ctn {
+    min-width: nth($min-width-list, 2);
+    max-width: nth($max-width-list, 2);
+    width:     nth($ctn-width-list, 2);
+  }
+
+  .visible-phone,
+  .hidden-tablet,
+  .visible-desktop {display: none !important;}
+
+}

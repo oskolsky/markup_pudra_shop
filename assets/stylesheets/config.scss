@@ -1,0 +1,159 @@
+//****************************************************************************************************
+//
+// .. FONTS
+//
+//****************************************************************************************************
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic);
+
+
+
+//****************************************************************************************************
+//
+// .. GRID
+//
+//****************************************************************************************************
+$grid: fixed; // .. fixed / fluid / responsive-auto / responsive-manual
+$grid-width-transition: false; // .. true / false
+
+//
+// .. Fixed
+//
+$grid-fixed-col-qty:    5;
+$grid-fixed-col-width:  160; // .. px
+$grid-fixed-col-gutter: 40; // .. px
+$grid-fixed-col-indent: 20; // .. px
+
+//
+// .. Fluid
+//
+$grid-fluid-col-gutter: 2; // .. %
+$grid-fluid-col-indent: 2rem; // .. rem / px
+
+//
+// .. Responsive
+//
+$grid-responsive-col-gutter: 2; // .. %
+$grid-responsive-col-indent: 2rem; // .. rem / px
+
+//
+// .. Responsive auto
+//
+$grid-responsive-auto-col-qty: 12; // .. 8 / 12
+
+//
+// .. Variables
+// .. desktop / tablet / phone
+//
+$root-font-size-list: (62.5%, 62.5%, 62.5%);
+$ctn-width-list: (80%, 80%, 80%);
+$min-width-list: (940px, 620px, 300px);
+$max-width-list: (1180px, 940px, 620px);
+
+
+
+//****************************************************************************************************
+//
+// .. STYLES
+//
+//****************************************************************************************************
+//
+// .. Body
+//
+$base-bg: #f7f7f7;
+$base-color: #272727;
+$base-font-family: "Open Sans", Helvetica, Arial, sans-serif;
+$base-font-size-list: (1.5rem, 1.5rem, 1.5rem);
+$base-font-weight: 400;
+$base-line-height-list: (1.5, 1.5, 1.5);
+
+//
+// .. Headings
+//
+$h-font-family: $base-font-family, Times, "Times New Roman", serif;
+
+$h1-font-size-list: (24px, 24px, 24px);
+$h2-font-size-list: (3rem, 3rem, 3rem);
+$h3-font-size-list: (2.5rem, 2.5rem, 2.5rem);
+$h4-font-size-list: (2rem, 2rem, 2rem);
+$h5-font-size-list: (inherit, inherit, inherit);
+$h6-font-size-list: (inherit, inherit, inherit);
+
+$h1-font-weight-list: (600, 600, 600);
+$h2-font-weight-list: (600, 600, 600);
+$h3-font-weight-list: (600, 600, 600);
+$h4-font-weight-list: (600, 600, 600);
+$h5-font-weight-list: (600, 600, 600);
+$h6-font-weight-list: (inherit, inherit, inherit);
+
+$h1-line-height-list: (16px, 16px, 16px);
+$h2-line-height-list: (1.125, 1.125, 1.125);
+$h3-line-height-list: (1.25, 1.25, 1.25);
+$h4-line-height-list: (1.375, 1.375, 1.375);
+$h5-line-height-list: (inherit, inherit, inherit);
+$h6-line-height-list: (inherit, inherit, inherit);
+
+//
+// .. Colors
+//
+$major-color: #123456;
+$minor-color: #654321;
+
+//
+// .. Focus
+//
+%focus-style {box-shadow: 0 0 .1rem .1rem rgba(41, 128, 185, .66);}
+$focus: true; // .. true / false
+
+//
+// .. Links
+//
+$link-color: #2980b9;
+$link-color-hover: #2980b9;
+$link-color-active: #2980b9;
+$link-style: nn;        // .. nn / uu / un / nu
+$link-style-pseudo: uu; // .. nn / uu / un
+
+//
+// .. Forms
+//
+$form-el-bg: #fff;
+$form-el-border-color: #ccc;
+$form-el-border: 1px solid $form-el-border-color;
+$form-el-border-radius: .3em;
+$form-el-color: #000;
+$form-el-color-required: #f90;
+$form-el-color-valid-true: #008000;
+$form-el-color-valid-false: #f00;
+$form-el-font-size: inherit;
+$form-el-line-height: inherit;
+$form-el-padding: .3rem .6rem;
+$form-btn-padding: .3rem 1.2rem;
+
+//
+// .. Content styles
+//
+$content-factor: 2;
+$content-link: false; // .. true / false
+$content-link-color: #0000cd;
+$content-link-color-hover: #ccc;
+$content-link-color-active: darken($content-link-color-hover, 10%);
+
+//
+// .. Text sizes
+//
+$tx-xxs-font-size: 70%;
+$tx-xs-font-size:  80%;
+$tx-s-font-size:   90%;
+$tx-m-font-size:   100%;
+$tx-l-font-size:   110%;
+$tx-xl-font-size:  120%;
+$tx-xxl-font-size: 130%;
+
+
+
+//****************************************************************************************************
+//
+// .. COMPONENTS
+//
+//****************************************************************************************************
+$components: true; // .. true / false
