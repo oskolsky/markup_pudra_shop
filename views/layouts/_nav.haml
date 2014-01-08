@@ -1,0 +1,17 @@
+%nav#nav.nav{role: "navigation"}
+  .ctn
+    %ul.menu
+      %li.menu_i
+        %a{href: "/catalogs", class: "menu_i_a"} Каталоги
+      %li.menu_i
+        %a{href: "/brands", class: "menu_i_a"} Бренды
+      %li.menu_i
+        %a{href: "/stock", class: "menu_i_a"} Акции
+      %li.menu_i
+        %a{href: "/training", class: "menu_i_a"} Обучение
+      %li.menu_i
+        %a{href: "/magazine", class: "menu_i_a"} Журнал
+    %form.search{action: "search"}
+      %input{type: "text", class: "search_input", placeholder: "Поиск по сайту"}
+      %input{type: "submit", class: "search_submit", value: "Найти"}
+      %i.ico.__24.__search.search_ico

@@ -1,13 +1,15 @@
 !!!
 %html.no-js{lang: "ru-RU"}
   %head
-    %title Pudra.by
+    %title Магазин косметики Pudra.by
     = haml '/views/layouts/_head'.to_sym
   
   %body#page.page
     = haml '/views/alerts/_ie'.to_sym
     = haml '/views/alerts/_no-js'.to_sym
+    = haml '/views/layouts/_bar'.to_sym
     = haml '/views/layouts/_header'.to_sym
+    = haml '/views/layouts/_nav'.to_sym
     
     %main#main.main{role: "main"}
       = yield

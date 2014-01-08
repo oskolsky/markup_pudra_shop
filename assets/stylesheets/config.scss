@@ -18,9 +18,9 @@ $grid-width-transition: false; // .. true / false
 //
 // .. Fixed
 //
-$grid-fixed-col-qty:    5;
-$grid-fixed-col-width:  160; // .. px
-$grid-fixed-col-gutter: 40; // .. px
+$grid-fixed-col-qty:    12;
+$grid-fixed-col-width:  60; // .. px
+$grid-fixed-col-gutter: 20; // .. px
 $grid-fixed-col-indent: 20; // .. px
 
 //
@@ -59,7 +59,7 @@ $max-width-list: (1180px, 940px, 620px);
 //
 // .. Body
 //
-$base-bg: #f7f7f7;
+$base-bg: #f2f2f2;
 $base-color: #272727;
 $base-font-family: "Open Sans", Helvetica, Arial, sans-serif;
 $base-font-size-list: (1.5rem, 1.5rem, 1.5rem);
@@ -95,14 +95,15 @@ $h6-line-height-list: (inherit, inherit, inherit);
 //
 // .. Colors
 //
-$major-color: #123456;
+$major-color: #e62368;
 $minor-color: #654321;
+$muted-color: #ddd;
 
 //
 // .. Focus
 //
 %focus-style {box-shadow: 0 0 .1rem .1rem rgba(41, 128, 185, .66);}
-$focus: true; // .. true / false
+$focus: false; // .. true / false
 
 //
 // .. Links

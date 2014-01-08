@@ -14,16 +14,21 @@
   display: inline-block;
   background-color: transparent;
   background-repeat: no-repeat;
-  // &.__16 {
-  //   @include size(16, 16);
-  //   background-image: url(/assets/images/icons/ico-16.png);
-  //   &.__cat {background-position: 0 0;}
-  //   &.__dog {background-position: -16px 0;}
-  // }
-  // &.__32 {
-  //   @include size(32, 32);
-  //   background-image: url(/assets/images/icons/ico-32.png);
-  //   &.__eagle {background-position: 0 0;}
-  //   &.__stork {background-position: -32px 0;}
-  // }
+  &.__social {
+    @include size(30, 30);
+    background-image: url(/assets/images/icons/ico-social.png);
+    &.__vk {background-position: 0 0;}
+    &.__fb {background-position: -30px 0;}
+    &.__tw {background-position: -60px 0;}
+    &.__yt {background-position: -90px 0;}
+    &.__ok {background-position: -120px 0;}
+    &.__ig {background-position: -150px 0;}
+    &.__p  {background-position: -180px 0;}
+    &.__gp {background-position: -210px 0;}
+  }
+  &.__24 {
+     @include size(24, 24);
+     background-image: url(/assets/images/icons/ico-24.png);
+     &.__search {background-position: 0 0;}
+  }
 }
