@@ -1,9 +1,64 @@
 %section.section{role: "region", "aria-label" => ""}
   .ctn
 
-    -#.grid
-      .grid-i.__grid-4.c-bg.__red 1
-      .grid-i.__grid-8.c-bg.__red 1
+    #tabs.tabs.__catalog
+      %ul
+        %li
+          %a{href: "#news"} Новинки
+        %li
+          %a{href: "#stock"} Акции
+        %li
+          %a{href: "#leader"} Лидеры продаж
+        %li
+          %a{href: "#order"} Под заказ
+      #news
+        .iosslider.__catalog
+          .slider
+            - 1.upto(5) do
+              .slide
+                .items
+                  - 1.upto(4) do
+                    = haml '/views/common/item/_item_new'.to_sym
+          .slider-nav
+            .slider-nav_i.__current
+            - 1.upto(4) do
+              .slider-nav_i
+      #stock
+        .iosslider.__catalog
+          .slider
+            - 1.upto(5) do
+              .slide
+                .items
+                  - 1.upto(4) do
+                    = haml '/views/common/item/_item_stock'.to_sym
+          .slider-nav
+            .slider-nav_i.__current
+            - 1.upto(4) do
+              .slider-nav_i
+      #leader
+        .iosslider.__catalog
+          .slider
+            - 1.upto(5) do
+              .slide
+                .items
+                  - 1.upto(4) do
+                    = haml '/views/common/item/_item_leader'.to_sym
+          .slider-nav
+            .slider-nav_i.__current
+            - 1.upto(4) do
+              .slider-nav_i
+      #order
+        .iosslider.__catalog
+          .slider
+            - 1.upto(5) do
+              .slide
+                .items
+                  - 1.upto(4) do
+                    = haml '/views/common/item/_item_order'.to_sym
+          .slider-nav
+            .slider-nav_i.__current
+            - 1.upto(4) do
+              .slider-nav_i
 
     .grid
       .grid-i.__grid-4

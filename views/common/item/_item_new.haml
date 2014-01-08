@@ -1,0 +1,12 @@
+- hash = rand(9999)
+%article.item.__label.__new
+  %header.item_name
+    %a{href: "/catalog_show#{hash}"} Relouis
+  .item_photo
+    %a{href: "/catalog_show#{hash}"}
+      %img{src: "/assets/images/fake/item_#{rand(1..4)}.jpg", class: "va-t", width: 130, height: 120, alt: "Микронизированные компактные румяна La Mia Italia"}
+  .item_caption
+    %a{href: "/catalog_show#{hash}"} Микронизированные компактные румяна La Mia Italia
+  %footer.item_price
+    .item_price_old.format-money.__rub 32000
+    .item_price_new.format-money.__rub 17000

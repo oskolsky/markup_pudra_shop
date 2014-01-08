@@ -10,8 +10,7 @@
     = haml '/views/layouts/_bar'.to_sym
     = haml '/views/layouts/_header'.to_sym
     = haml '/views/layouts/_nav'.to_sym
-    
     %main#main.main{role: "main"}
       = yield
-
+      = haml '/views/layouts/_site_map'.to_sym
     = haml '/views/layouts/_footer'.to_sym

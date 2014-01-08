@@ -46,6 +46,8 @@ yepnope([
       ]);
     }
   },
+
+  '/assets/javascripts/vendor/jquery.iosslider.min.js', // v1.3.24
   
   {
     load: '/assets/javascripts/vendor/jquery.arcticmodal-0.3.min.js', // .. 0.3
@@ -83,7 +85,7 @@ yepnope([
         currency: {
           decimal: '.',
           thousand: ' ',
-          precision: 2
+          precision: 0
         },
         number: {
           decimal : '.',

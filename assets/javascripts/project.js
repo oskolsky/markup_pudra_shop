@@ -6,6 +6,28 @@ $(function() {
 
   //****************************************************************************************************
   //
+  // .. ITEMS
+  //
+  //****************************************************************************************************
+  $('.items').find('.item').resizeToMaxHeight();
+
+
+
+  //****************************************************************************************************
+  //
+  // .. TABS
+  //
+  //****************************************************************************************************
+  $('#tabs').tabs();
+
+  $('.tabs.__catalog').on('tabsactivate', function(event, ui) {
+    $('.iosslider.__catalog').iosSlider('update');
+  });
+
+
+
+  //****************************************************************************************************
+  //
   // .. DOUBLE HOVER
   //
   //****************************************************************************************************
@@ -51,6 +73,30 @@ $(function() {
     swipe: true,
     timeout: 3000
   });
+
+  $('.iosslider').each(function() {
+    $(this).iosSlider({
+      navSlideSelector: $(this).find('.slider-nav').find('.slider-nav_i'),
+      responsiveSlideContainer: false,
+      responsiveSlides: false,
+      snapToChildren: true,
+      onSliderLoaded: function(args) {
+        var h = args.sliderObject.find('.slide').css({height: ''}).maxHeight();
+        args.sliderObject.find('.slide').css({height: ''}).resizeToMaxHeight();
+        args.sliderObject.closest('.iosslider').css({height: h + 'px'});
+        // todo: купить слайдер
+        $('.iosslider').find('i').remove();
+      },
+      onSlideStart: function(args) {
+        args.sliderObject.closest('.iosslider').find('.slider-nav').find('.slider-nav_i').removeClass('__current');
+      },
+      onSlideComplete: function(args) {
+        args.sliderObject.closest('.iosslider').find('.slider-nav').find('.slider-nav_i:eq(' + (args.currentSlideNumber - 1) + ')').addClass('__current');
+      }
+    });
+
+  });
+
 
 
 
@@ -119,7 +165,7 @@ $(function() {
       formatMoney = accounting.formatMoney(number);
     
     if ($(this).hasClass('__rub')) {
-      $(this).text(formatMoney).append('&nbsp;<i class="fa fa-ruble"></i>');
+      $(this).text(formatMoney).append('&nbsp;<span>руб.</span>');
     } else {
       $(this).text(formatMoney);
     }
