@@ -65,13 +65,18 @@ $(function() {
   // .. SLIDERS
   //
   //****************************************************************************************************
-  $('#cycle-2-slider').cycle({
-    centerHorz: true,
-    centerVert: true,
-    log: false,
-    speed: 1000,
-    swipe: true,
-    timeout: 3000
+  $('.imageslider').each(function() {
+    var _this = this;
+    $(_this).find('.slider').cycle({
+      fx: 'scrollHorz',
+      log: false,
+      speed: 250,
+      swipe: true,
+      timeout: 3000,
+      slides: '.slide',
+      pager: $(_this).find('.slider-nav'),
+      pagerTemplate: '<i class="slider-nav_i" />'
+    });
   });
 
   $('.iosslider').each(function() {

@@ -2,5 +2,7 @@
   .m-t_#{$i} {margin-top:     #{$i}rem !important;}
   .m-b_#{$i} {margin-bottom:  #{$i}rem !important;}
   .p-t_#{$i} {padding-top:    #{$i}rem !important;}
+  .p-r_#{$i} {padding-right : #{$i}rem !important;}
   .p-b_#{$i} {padding-bottom: #{$i}rem !important;}
+  .p-l_#{$i} {padding-left:   #{$i}rem !important;}
 }
