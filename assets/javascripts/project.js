@@ -153,27 +153,7 @@ $(function() {
   // .. Money
   //
   $('.format-money').each(function() {
-    var c = accounting.settings.currency;
-
-    if ($(this).hasClass('__rub')) {
-      c.format = '%v';
-    } else if ($(this).hasClass('__usd')) {
-      c.symbol = '$';
-      c.format = '%s%v';
-    } else if ($(this).hasClass('__eur')) {
-      c.symbol = '€';
-      c.format = '%s%v';
-    }
-
-    var
-      number = parseFloat($(this).text()),
-      formatMoney = accounting.formatMoney(number);
-    
-    if ($(this).hasClass('__rub')) {
-      $(this).text(formatMoney).append('&nbsp;<span>руб.</span>');
-    } else {
-      $(this).text(formatMoney);
-    }
+    bindAccounting($(this));
   });
 
 
@@ -208,3 +188,34 @@ $(function() {
 //
 //****************************************************************************************************
 $(window).load(function() {});
+
+
+
+//****************************************************************************************************
+//
+// .. FUNCTION
+//
+//****************************************************************************************************
+function bindAccounting($el) {
+  var c = accounting.settings.currency;
+
+  if ($el.hasClass('__rub')) {
+    c.format = '%v';
+  } else if ($el.hasClass('__usd')) {
+    c.symbol = '$';
+    c.format = '%s%v';
+  } else if ($el.hasClass('__eur')) {
+    c.symbol = '€';
+    c.format = '%s%v';
+  }
+
+  var
+    number = parseFloat($el.text()),
+    formatMoney = accounting.formatMoney(number);
+
+  if ($el.hasClass('__rub')) {
+    $el.text(formatMoney).append('&nbsp;<span>руб.</span>');
+  } else {
+    $el.text(formatMoney);
+  }
+}

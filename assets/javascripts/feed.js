@@ -17,6 +17,9 @@ $(function() {
           var $moreBlocks = $(response);
           Refresher.stopAnimation(function() {
             if ($moreBlocks.length > 0) {
+              $moreBlocks.find('.format-money').each(function() {
+                bindAccounting($(this));
+              });
               $feed.append( $moreBlocks );
               $('.items').find('.item').removeAttr('style').resizeToMaxHeight();
             } else {
