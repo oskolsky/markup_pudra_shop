@@ -99,6 +99,11 @@ $major-color: #e62368;
 $minor-color: #654321;
 $muted-color: #ddd;
 
+$new-color:    #79c108;
+$stock-color:  #fa1951;
+$hit-color:    #ebb308;
+$order-color:  #00bee7;
+
 //
 // .. Focus
 //
@@ -118,15 +123,15 @@ $link-style-pseudo: uu; // .. nn / uu / un
 // .. Forms
 //
 $form-el-bg: #fff;
-$form-el-border-color: #ccc;
+$form-el-border-color: #929292;
 $form-el-border: 1px solid $form-el-border-color;
-$form-el-border-radius: .3em;
+$form-el-border-radius: 0;
 $form-el-color: #000;
 $form-el-color-required: #f90;
 $form-el-color-valid-true: #008000;
 $form-el-color-valid-false: #f00;
-$form-el-font-size: inherit;
-$form-el-line-height: inherit;
+$form-el-font-size: 13px;
+$form-el-line-height: 25px;
 $form-el-padding: .3rem .6rem;
 $form-btn-padding: .3rem 1.2rem;
 

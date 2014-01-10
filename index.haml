@@ -1,7 +1,6 @@
 %section.section.__home.m-b_3{role: "region", "aria-label" => ""}
   .ctn
     .p-t_4
-
       .m-b_4
         #tabs.tabs.__catalog
           %ul
@@ -10,7 +9,7 @@
             %li
               %a{href: "#stock"} Акции
             %li
-              %a{href: "#leader"} Лидеры продаж
+              %a{href: "#hit"} Лидеры продаж
             %li
               %a{href: "#order"} Под заказ
           #news
@@ -41,7 +40,7 @@
                   - 1.upto(4) do
                     %li.slider-nav_i
                 %a{href: "/catalog", class: "slider-more"} Все акции
-          #leader
+          #hit
             .layer
               .iosslider.__catalog
                 .slider
@@ -49,7 +48,7 @@
                     .slide
                       .items
                         - 1.upto(4) do
-                          = haml '/views/common/item/_item_leader'.to_sym
+                          = haml '/views/common/item/_item_hit'.to_sym
                 %ul.slider-nav
                   %li.slider-nav_i.__current
                   - 1.upto(4) do
@@ -69,7 +68,6 @@
                   - 1.upto(4) do
                     %li.slider-nav_i
                 %a{href: "/catalog", class: "slider-more"} Все под заказ
-
       .grid
         .grid-i.__grid-4
           %img{src: "/assets/images/blank.gif", class: "c-bg __gray", width: "100%", height: 200, alt: ""}

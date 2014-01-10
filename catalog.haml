@@ -1,44 +1,16 @@
 %section.section.m-t_3.m-b_3{role: "region", "aria-label" => ""}
   .ctn
     .p-t_2
-
-      %nav.breadcrumbs
-        %a{href: "/", class: "breadcrumbs_i"} Главная
-        %span{class: "breadcrumbs_i __current"} Популярная косметика
-
-      .headline.m-b_4
-        .grid
-          .grid-i.__grid-10.va-b
-            %h1.headline_t Популярная косметика
-          .grid-i.__grid-2.va-b
-            .tx.__right
-              %a{href: "#", class: "headline_print"}
-                %i.ico.__16.__print
-                На печать
-
+      = haml "/views/common/_breadcrumbs".to_sym
+      .m-b_4
+        = haml "/views/common/_headline".to_sym
       .grid
-        .grid-i.__grid-3
-          %aside
-
-        .grid-i.__grid-9
-          %section
-
-            .m-b_2
-              .imageslider.__banners
-                .slider
-                  - 1.upto(3) do
-                    %a{href: "#", class: "slide"}
-                      %img{src: "/assets/images/fake/banner_1.jpg", width: "700", height: "200", alt: ""}
-                %ul.slider-nav
-
-            .layer.p-t_2.p-r_2.p-b_2.p-l_2
-              #feed
-                - 1.upto(5) do
-                  .items.m-b_2
-                    - 1.upto(3) do
-                      - partials = ['/views/common/item/_item', '/views/common/item/_item_new', '/views/common/item/_item_leader', '/views/common/item/_item_order', '/views/common/item/_item_stock']
-                      - rand_partial_name = partials.sample
-                      = haml rand_partial_name.to_sym
-              %a{href: "#", id: "load", class: "load", rel: "feed"}
-                Загрузить еще 15
-                %i#refresher.ico.__14.__refresh
+        %aside.grid-i.__grid-3
+          = haml "/views/common/catalog/_filter".to_sym
+        %section.grid-i.__grid-9
+          .m-b_2
+            = haml "/views/common/banners/_catalog".to_sym
+          .layer.p-t_2.p-r_2.p-b_2.p-l_2
+            #feed
+              = haml "/views/common/catalog/_feed".to_sym
+            = haml "/views/common/catalog/_load_more".to_sym

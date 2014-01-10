@@ -70,19 +70,19 @@ a.form_button {
 // .. Checkbox
 //
 .form_checkbox.__fake {
-  width: 1.6rem;
-  height: 1.6rem;
-  line-height: 1.6rem;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
   background: $form-el-bg;
   border: $form-el-border;
   border-radius: $form-el-border-radius;
   @include prefixes(box-sizing, border-box);
   &[data-checked="true"]::after {
     content:"\f00c";
-    margin: -1px 0 0 -1px;
-    color: fade-out($form-el-color, .3);
+    margin: -1px 0 0 1px;
+    color: #f21249;
     font-family: FontAwesome;
-    font-size: 1.2rem;
+    font-size: 10px;
     text-align: center;
   }
   &[data-checked="true"][disabled]::after {opacity: .33;}
@@ -201,7 +201,7 @@ a.form_button {
   .form_checkbox,
   .form_radio {
     &.__fake {
-      top: .1em;
+      top: 2px;
       vertical-align: baseline;
     }
   }

@@ -1,0 +1,6 @@
+- 1.upto(5) do
+  .items.m-b_2
+    - 1.upto(3) do
+      - partials = ['/views/common/item/_item', '/views/common/item/_item_new', '/views/common/item/_item_hit', '/views/common/item/_item_order', '/views/common/item/_item_stock']
+      - rand_partial_name = partials.sample
+      = haml rand_partial_name.to_sym

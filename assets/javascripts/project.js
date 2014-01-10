@@ -28,6 +28,35 @@ $(function() {
 
   //****************************************************************************************************
   //
+  // .. FILTER
+  //
+  //****************************************************************************************************
+  $('.filter_block').each(function() {
+    $(this).find('.filter_block_t').click(function() {
+      if ($(this).siblings('.filter_block_b').is(':hidden')) {
+        $(this).siblings('.filter_block_b').slideDown();
+      } else {
+        $(this).siblings('.filter_block_b').slideUp();
+      }
+    });
+  });
+
+  $('.filter_accordion').find('.filter_accordion_i').each(function() {
+    $(this).find('.filter_accordion_i_t').click(function() {
+      if ($(this).siblings('.filter_accordion_i_b').is(':hidden')) {
+        $(this).siblings('.filter_accordion_i_b').slideDown();
+        $(this).addClass('__open');
+      } else {
+        $(this).siblings('.filter_accordion_i_b').slideUp();
+        $(this).removeClass('__open');
+      }
+    });
+  });
+
+
+
+  //****************************************************************************************************
+  //
   // .. DOUBLE HOVER
   //
   //****************************************************************************************************
