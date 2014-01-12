@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6,
   
   .a.__pseudo { @include prefixes(transition, #{border .33s, color .33s}); }
   .a.__pseudo,
-  .a.__pseudo.__inner > span {border-bottom: .1em dotted $link-color;}
+  .a.__pseudo.__inner > span {border-bottom: .1em dashed $link-color;}
   .a.__pseudo:hover,
   .a.__pseudo.hover,
   .a.__pseudo.__inner:hover > span,
@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6,
   
   .a.__pseudo { @include prefixes(transition, none); }
   .a.__pseudo,
-  .a.__pseudo.__inner > span {border-bottom: .1em dotted $link-color;}
+  .a.__pseudo.__inner > span {border-bottom: .1em dashed $link-color;}
   .a.__pseudo.__inner,
   .a.__pseudo:hover,
   .a.__pseudo.hover,

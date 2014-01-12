@@ -13,7 +13,6 @@
 .bar {
   background-color: #fff;
   border-bottom: 3px solid $muted-color;
-  color: #3b3c40;
 }
   .bar_i {
     cursor: pointer;
@@ -54,8 +53,10 @@
         z-index: 999;
         &.__location, &.__currency {
           .bar_i_inner_a {
-            color: #3b3c40;
-            span {border-bottom: 1px dashed #3b3c40;}
+            &:hover {
+              color: $base-color;
+              span {border-color: $base-color;}
+            }
             &::after {
               color: #e62370;
               content: '\f078';
@@ -101,7 +102,6 @@
 
           }
             .dropdown_menu_i_a {
-              color: $base-color;
               display: block;
               line-height: 25px;
               padding: 0 10px;
@@ -334,12 +334,11 @@
     .item_name {
       margin-bottom: 10px;
       a {
-        color: #f21249;
+        color: $link-color-hover;
         font-size: 12px;
         line-height: 14px;
         text-decoration: underline;
         &:hover {
-          color: #f21249;
           text-decoration: none;
         }
       }
@@ -577,10 +576,6 @@
             border-color: #f9093a;
           }
         }
-        a {
-          color: #29282d;
-          border-bottom: 1px dashed #29282d;
-        }
       }
     }
     .ui-tabs-panel {
@@ -604,7 +599,6 @@
     text-align: center;
   }
     .site-map_toggle_a {
-      color: $base-color;
       font-size: 12px;
       font-weight: 700;
       line-height: 1;
@@ -617,8 +611,10 @@
         position: relative;
         top: -2px;
       }
-      &:hover {color: $base-color;}
-      span {border-bottom: 1px dashed $base-color;}
+      &:hover {
+        color: inherit;
+        span {border-color: $base-color !important;}
+      }
       &.__open {
         &::after {content: '\f077';}
       }
@@ -652,7 +648,6 @@
       }
     }
       .site-map_nav_a {
-        color: $base-color;
         clear: left;
         font-size: 12px;
         float: left;
@@ -660,7 +655,6 @@
         opacity: .8;
         text-decoration: underline;
         &:not(:last-child) {margin-bottom: 10px;}
-        &:hover {color: #fa1951;}
       }
 
 
@@ -788,12 +782,10 @@
           line-height: 14px;
           &:not(:last-child) {margin-bottom: 5px;}
           a {
-            color: #4c4c4c;
             font-size: 12px;
             line-height: inherit;
             text-decoration: underline;
             &:hover {
-              color: #f21249;
               text-decoration: none;
             }
           }
@@ -823,13 +815,9 @@
         &:not(:last-child) {margin-right: 25px;}
       }
         .footer_nav_i_a {
-          color: #272727;
           font-size: 14px;
           font-weight: 700;
           text-transform: uppercase;
-          &:hover {
-            color: $major-color;
-          }
         }
 
     //
@@ -932,7 +920,7 @@
           left: -10px;
         }
         a {
-          color: #f21249;
+          color: $link-color-hover;
           font-size: 12px;
           line-height: 30px;
           text-decoration: underline;

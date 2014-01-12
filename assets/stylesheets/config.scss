@@ -113,9 +113,9 @@ $focus: false; // .. true / false
 //
 // .. Links
 //
-$link-color: #2980b9;
-$link-color-hover: #2980b9;
-$link-color-active: #2980b9;
+$link-color: $base-color;
+$link-color-hover: #f21249;
+$link-color-active: #f21249;
 $link-style: nn;        // .. nn / uu / un / nu
 $link-style-pseudo: uu; // .. nn / uu / un
 
