@@ -497,39 +497,74 @@
 
 
 
-
 //****************************************************************************************************
 //
 // .. SITE MAP
 //
 //****************************************************************************************************
-//.site-map {
-//  padding: 0 0 40px 0;
-//}
-//  .site-map_nav {
-//    display: inline-block;
-//    &:not(:last-child) {
-//      margin-right: 60px;
-//    }
-//  }
-//    .site-map_nav_t {
-//      font-size: 14px;
-//      font-weight: 700;
-//      line-height: 21px;
-//      margin-bottom: 20px;
-//      text-transform: uppercase;
-//    }
-//    .site-map_nav_a {
-//      color: $base-color;
-//      clear: left;
-//      font-size: 12px;
-//      float: left;
-//      line-height: 15px;
-//      opacity: .8;
-//      text-decoration: underline;
-//      &:not(:last-child) {margin-bottom: 10px;}
-//      &:hover {color: #fa1951;}
-//    }
+.site-map {
+
+}
+  .site-map_toggle {
+    padding: 30px 0;
+    text-align: center;
+  }
+    .site-map_toggle_a {
+      color: $base-color;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+      &:hover {color: $base-color;}
+      span {
+        border-color: $base-color !important;
+        margin-right: 10px;
+      }
+      .fa {
+        font-size: 10px;
+        position: relative;
+        top: -2px;
+      }
+    }
+  .site-map_navs {
+    display: none;
+    padding-bottom: 40px;
+  }
+    .site-map_nav {
+      display: inline-block;
+      &.__catalog {
+        width: 210px;
+      }
+      &.__brands {
+        width: 115px;
+      }
+      &.__actions {
+        width: 115px;
+      }
+      &.__study {
+        width: 125px;
+      }
+      &.__magazine {
+        width: 110px;
+      }
+      &.__pudra {
+        width: 165px;
+      }
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+      .site-map_nav_a {
+        color: $base-color;
+        clear: left;
+        font-size: 12px;
+        float: left;
+        line-height: 15px;
+        opacity: .8;
+        text-decoration: underline;
+        &:not(:last-child) {margin-bottom: 10px;}
+        &:hover {color: #fa1951;}
+      }
 
 
 
