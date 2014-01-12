@@ -1,0 +1,24 @@
+.sprites {
+  display: inline-block;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  &.__payment {
+    @include size(140, 55);
+    background-image: url(/assets/images/sprites/sprite-payment.jpg);
+    vertical-align: top;
+    &.__visa {background-position: 0 0;}
+    &.__wm   {background-position: -140px 0;}
+    &.__mc   {background-position: -280px 0;}
+    &.__ep   {background-position: -420px 0;}
+    &.__cash {background-position: -560px 0;}
+  }
+  &.__partnerships {
+    background-image: url(/assets/images/sprites/sprite-partnerships.jpg);
+    vertical-align: top;
+    &.__lj       {@include size(62, 31); background-position: 0 0;}
+    &.__kraft    {@include size(95, 31); background-position: -62px 0;}
+    &.__relouis  {@include size(65, 31); background-position: -157px 0;}
+    &.__svyaznoy {@include size(97, 31); background-position: -222px 0;}
+    &.__bgs      {@include size(69, 31); background-position: -319px 0;}
+  }
+}

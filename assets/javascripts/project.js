@@ -110,6 +110,8 @@ $(function() {
 
   $('.iosslider').each(function() {
     $(this).iosSlider({
+      autoSlide: true,
+      autoSlideTimer: 5000,
       navSlideSelector: $(this).find('.slider-nav').find('.slider-nav_i'),
       responsiveSlideContainer: false,
       responsiveSlides: false,

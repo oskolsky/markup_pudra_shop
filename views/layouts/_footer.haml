@@ -1,68 +1,146 @@
 %footer#footer.footer{role: "contentinfo"}
 
-  -#%section.footer_summary
+  %section.footer_section.__links
     .ctn
+      .grid
+        .grid-i.__grid-2
+          %nav.m-b_2
+            %h2.tx.__upper Как заказать
+            %ul
+              %li
+                %a{href: "#"} О магазине
+              %li
+                %a{href: "#"} Доставка
+              %li
+                %a{href: "#"} Оплата
+              %li
+                %a{href: "#"} Возврат товара
+              %li
+                %a{href: "#"} Изменения в заказе
+          %nav
+            %h2.tx.__upper Информация
+            %ul
+              %li
+                %a{href: "#"} Поставщикам
+              %li
+                %a{href: "#"} Партнерская программа
+              %li
+                %a{href: "#"} Использование информации
+        .grid-i.__grid-7
+          .footer_payment.m-b_3
+            %h2.tx.__upper Мы принимаем к оплате
+            %nav.tx.__center1
+              .d-ib.va-m
+                .footer_payment_i.__cash
+                  %a{href: "#"}
+                    %i.sprites.__payment.__cash.m-b_1
+                    %p Наличные<br>деньги
+              .d-ib.va-m
+                .footer_payment_i.__visa
+                  %a{href: "#"}
+                    %i.sprites.__payment.__visa
+                .footer_payment_i.__wm
+                  %a{href: "#"}
+                    %i.sprites.__payment.__wm
+                %br
+                .footer_payment_i.__mc
+                  %a{href: "#"}
+                    %i.sprites.__payment.__mc
+                .footer_payment_i.__ep
+                  %a{href: "#"}
+                    %i.sprites.__payment.__ep
+          .footer_partnerships
+            %h2.tx.__upper Наши партнеры
+            %nav
+              .footer_partnerships_i
+                %a{href: "#"}
+                  %i.sprites.__partnerships.__lj
+              .footer_partnerships_i
+                %a{href: "#"}
+                  %i.sprites.__partnerships.__kraft
+              .footer_partnerships_i
+                %a{href: "#"}
+                  %i.sprites.__partnerships.__relouis
+              .footer_partnerships_i
+                %a{href: "#"}
+                  %i.sprites.__partnerships.__svyaznoy
+              .footer_partnerships_i
+                %a{href: "#"}
+                  %i.sprites.__partnerships.__bgs
+        .grid-i.__grid-3
+          .footer_safety
+            %h2.tx.__upper.m-b_1 О Безопасности покупок
+            %figure.footer_safety_i
+              %i.ico.__30.__user
+              %a{href: "#"} Конфиденциальность
+              %figcaption
+                %p Яркий и&nbsp;современный магазин косметики и&nbsp;парфюмерии в&nbsp;Киеве
+            %figure.footer_safety_i
+              %i.ico.__30.__lock
+              %a{href: "#"} Безопастность платежей
+              %figcaption
+                %p Яркий и&nbsp;современный магазин косметики и&nbsp;парфюмерии в&nbsp;Киеве
+            %figure.footer_safety_i
+              %i.ico.__30.__stop
+              %a{href: "#"} Никакого спама
+              %figcaption
+                %p Яркий и&nbsp;современный магазин косметики и&nbsp;парфюмерии в&nbsp;Киеве
 
-  %section.footer_nav
+  %section.footer_section.__nav
     .ctn
       .grid
         .grid-i.__grid-5.va-m
           %nav
-            %ul.footer_nav_menu
-              %li.footer_nav_menu_i
-                %a{href: "/contacts", class: "footer_nav_menu_i_a"} Контакты
-              %li.footer_nav_menu_i
-                %a{href: "/details", class: "footer_nav_menu_i_a"} Реквизиты
-              %li.footer_nav_menu_i
-                %a{href: "/career", class: "footer_nav_menu_i_a"} Карьера
-              %li.footer_nav_menu_i
-                %a{href: "/advertisement", class: "footer_nav_menu_i_a"} Реклама
+            %ul.footer_nav
+              %li.footer_nav_i
+                %a{href: "/contacts", class: "footer_nav_i_a"} Контакты
+              %li.footer_nav_i
+                %a{href: "/details", class: "footer_nav_i_a"} Реквизиты
+              %li.footer_nav_i
+                %a{href: "/career", class: "footer_nav_i_a"} Карьера
+              %li.footer_nav_i
+                %a{href: "/advertisement", class: "footer_nav_i_a"} Реклама
         .grid-i.__grid-7.va-m
           %nav.tx.__right
-            %span.tx.__xs.__upper.va-m Мы в социальных сетях:
-            %ul.footer_nav_social.va-m
-              %li.footer_nav_social_i
-                %a{href: "#", class: "footer_nav_social_i_a"}
+            %span.tx.__12.__upper.va-m Мы в социальных сетях:
+            %ul.footer_social.va-m
+              %li.footer_social_i
+                %a{href: "#", class: "footer_social_i_a"}
                   %i.ico.__social.__vk
-              %li.footer_nav_social_i
-                %a{href: "#", class: "footer_nav_social_i_a"}
+              %li.footer_social_i
+                %a{href: "#", class: "footer_social_i_a"}
                   %i.ico.__social.__fb
-              %li.footer_nav_social_i
-                %a{href: "#", class: "footer_nav_social_i_a"}
+              %li.footer_social_i
+                %a{href: "#", class: "footer_social_i_a"}
                   %i.ico.__social.__tw
-              %li.footer_nav_social_i
-                %a{href: "#", class: "footer_nav_social_i_a"}
+              %li.footer_social_i
+                %a{href: "#", class: "footer_social_i_a"}
                   %i.ico.__social.__yt
-              %li.footer_nav_social_i
-                %a{href: "#", class: "footer_nav_social_i_a"}
+              %li.footer_social_i
+                %a{href: "#", class: "footer_social_i_a"}
                   %i.ico.__social.__ok
-              %li.footer_nav_social_i
-                %a{href: "#", class: "footer_nav_social_i_a"}
+              %li.footer_social_i
+                %a{href: "#", class: "footer_social_i_a"}
                   %i.ico.__social.__ig
-              %li.footer_nav_social_i
-                %a{href: "#", class: "footer_nav_social_i_a"}
+              %li.footer_social_i
+                %a{href: "#", class: "footer_social_i_a"}
                   %i.ico.__social.__p
-              %li.footer_nav_social_i
-                %a{href: "#", class: "footer_nav_social_i_a"}
+              %li.footer_social_i
+                %a{href: "#", class: "footer_social_i_a"}
                   %i.ico.__social.__gp
 
-  %section.footer_info
+  %section.footer_section.__info
     .ctn
       .grid
         .grid-i.__grid-5
-          %article.footer_info_description
-            %p.footer_info_description_t Интернет-магазин косметики и парфюмерии «пудра.by»
-            %p.footer_info_description_tx Яркий и&nbsp;современный магазин косметики и&nbsp;парфюмерии в&nbsp;Киеве и&nbsp;Украине. Большой выбор товаров&mdash; уход за&nbsp;кожей лица и&nbsp;тела, уход за&nbsp;волосами, инструменты, подарки. Профессиональная косметика. Доставка по&nbsp;Киеву и&nbsp;в&nbsp;любую точку Украины.
+          %article
+            %p.tx.__12.__upper Интернет-магазин косметики и парфюмерии «пудра.by»
+            %p.tx.__11.__muted.__70 Яркий и&nbsp;современный магазин косметики и&nbsp;парфюмерии в&nbsp;Киеве и&nbsp;Украине. Большой выбор товаров&mdash; уход за&nbsp;кожей лица и&nbsp;тела, уход за&nbsp;волосами, инструменты, подарки. Профессиональная косметика. Доставка по&nbsp;Киеву и&nbsp;в&nbsp;любую точку Украины.
         .grid-i.__grid-4
-          %article.footer_info_location
-            %p.footer_info_location_t Регион: Украина и Киев
-            %p.footer_info_location_tx
-              ФОП Дух Н. В.
-              %br
-              Св-во гос. регистрации –№ 761700 от 17.09.2012
-              %br
-              Выдано Деснянской районнной гос. администрацией г. Киева ИНН: 3192518926
+          %article
+            %p.tx.__12 Регион: Украина и Киев
+            %p.tx.__11.__muted.__50 ФОП Дух Н. В.<br>Св-во гос. регистрации –№ 761700 от 17.09.2012<br>Выдано Деснянской районнной гос. администрацией г. Киева ИНН: 3192518926
         .grid-i.__grid-3
-          %article.footer_info_copyright
-            %p Copyright © 2009-2013 «Пудра.by».
-            %p Все права защищены.
+          %article
+            %p.tx.__11.__muted.__50 Copyright © 2009-2013 «Пудра.by».
+            %p.tx.__11.__muted.__50 Все права защищены.

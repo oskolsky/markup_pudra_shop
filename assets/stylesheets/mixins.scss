@@ -1,3 +1,8 @@
+@mixin size($w, $h) {
+  width:  #{$w}px;
+  height: #{$h}px;
+}
+
 @mixin media-query($media-query) {
 
   @if $media-query == "phone" {
@@ -14,8 +19,6 @@
 
 }
 
-
-
 @mixin prefixes($property, $value) {
   -webkit-#{$property}: $value;
      -moz-#{$property}: $value;
@@ -23,8 +26,6 @@
        -o-#{$property}: $value;
           #{$property}: $value;
 }
-
-
 
 @mixin linear-gradient($direction, $start, $end) {
   background: $start;

@@ -139,6 +139,16 @@ h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {font-fam
     &.__white  {color: white;}
   }
 
+  &.__muted {
+    &.__50 {opacity: .5;}
+    &.__70 {opacity: .7;}
+  }
+
+  &.__11 {font-size: 11px;}
+  &.__12 {font-size: 12px;}
+  &.__13 {font-size: 13px;}
+  &.__14 {font-size: 14px;}
+
   &.__xxs {font-size: $tx-xxs-font-size;}
   &.__xs  {font-size: $tx-xs-font-size;}
   &.__s   {font-size: $tx-s-font-size;}
