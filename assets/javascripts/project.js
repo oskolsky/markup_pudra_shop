@@ -21,8 +21,10 @@ $(function() {
   $('#site-map').find('.site-map_toggle_a').click(function() {
     var $el = $('#site-map').find('.site-map_navs');
     if ( $el.is(':hidden') ) {
+      $(this).addClass('__open');
       $el.slideDown();
     } else {
+      $(this).removeClass('__open');
       $el.slideUp();
     }
     return false;
