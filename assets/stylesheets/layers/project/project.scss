@@ -25,16 +25,31 @@
       &:last-child  {border-color: #eee;}
       @include linear-gradient(vertical, #f8f8f8, #fefefe);
     }
-    &.__location {
+    &.__location, &.__currency {
       &:hover {
         .dropdown {display: block;}
         .bar_i_inner_a {&::after {content: '\f077';}}
       }
     }
-    &.__currency {
+    &.__contacts {
+
+    }
+    &.__user {
+      a {
+        color: $major-color;
+        text-decoration: underline;
+        &:hover {text-decoration: none;}
+      }
+      .ico {
+        margin-right: 8px;
+        position: relative;
+        top: -2px;
+      }
       &:hover {
         .dropdown {display: block;}
-        .bar_i_inner_a {&::after {content: '\f077';}}
+        .ico {
+          @extend .ico.__20.__user.__hover;
+        }
       }
     }
   }
@@ -58,7 +73,7 @@
               span {border-color: $base-color;}
             }
             &::after {
-              color: #e62370;
+              color: $major-color;
               content: '\f078';
               font-size: 8px;
               font-family: FontAwesome;
@@ -81,35 +96,38 @@
         border-right:  1px solid #e1e1e1;
         border-bottom: 1px solid #e1e1e1;
         border-left:   1px solid #e1e1e1;
-        display: none;
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, .1);
         padding: 50px 10px 0;
         position: absolute;
-        box-shadow: 0 0 15px 5px rgba(0, 0, 0, .1);
         top: 0;
         right: -1px;
         left: 0;
         z-index: 998;
         @include prefixes(transition, all .33s);
-        &.__menu {
-
-        }
       }
-        .dropdown_menu {
+        .dropdown_inner {
           border-top: 3px solid #ddd;
           padding: 10px 0;
         }
-          .dropdown_menu_i {
+
+          //
+          // .. Menu
+          //
+          .dropdown_menu {
 
           }
-            .dropdown_menu_i_a {
-              display: block;
-              line-height: 25px;
-              padding: 0 10px;
-              &:hover {
-                background-color: $base-color;
-                color: #fff;
-              }
+            .dropdown_menu_i {
+
             }
+              .dropdown_menu_i_a {
+                display: block;
+                line-height: 25px;
+                padding: 0 10px;
+                &:hover {
+                  background-color: $base-color;
+                  color: #fff;
+                }
+              }
 
 
 
@@ -625,27 +643,13 @@
   }
     .site-map_nav {
       display: inline-block;
-      &.__catalog {
-        width: 210px;
-      }
-      &.__brands {
-        width: 115px;
-      }
-      &.__actions {
-        width: 115px;
-      }
-      &.__study {
-        width: 125px;
-      }
-      &.__magazine {
-        width: 110px;
-      }
-      &.__pudra {
-        width: 165px;
-      }
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
+      &.__catalog  {width: 210px;}
+      &.__brands   {width: 115px;}
+      &.__actions  {width: 115px;}
+      &.__study    {width: 125px;}
+      &.__magazine {width: 110px;}
+      &.__pudra    {width: 165px;}
+      &:not(:last-child) {margin-right: 20px;}
     }
       .site-map_nav_a {
         clear: left;
@@ -664,6 +668,36 @@
 // .. ELEMENTS
 //
 //****************************************************************************************************
+//
+// .. USER BLOCK
+//
+.authorized {
+  padding: 10px;
+  position: relative;
+}
+  .authorized_user {
+
+  }
+    .authorized_user_avatar {
+      position: absolute;
+      vertical-align: top;
+    }
+    .authorized_user_caption {
+      margin-bottom: 20px;
+      min-height: 50px;
+      padding-left: 70px;
+    }
+      .authorized_user_name {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16px;
+        margin-bottom: 5px;
+      }
+      .authorized_user_status {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
 //
 // .. LAYER
 //
@@ -785,9 +819,7 @@
             font-size: 12px;
             line-height: inherit;
             text-decoration: underline;
-            &:hover {
-              text-decoration: none;
-            }
+            &:hover {text-decoration: none;}
           }
         }
       }
@@ -920,7 +952,7 @@
           left: -10px;
         }
         a {
-          color: $link-color-hover;
+          color: $major-color;
           font-size: 12px;
           line-height: 30px;
           text-decoration: underline;

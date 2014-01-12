@@ -24,6 +24,12 @@
     background-image: url(/assets/images/icons/ico-16.png);
     &.__pront {background-position: 0 0;}
   }
+  &.__20 {
+    @include size(20, 20);
+    background-image: url(/assets/images/icons/ico-20.png);
+    &.__user         {background-position: 0 0;}
+    &.__user.__hover {background-position: 0 -20px;}
+  }
   &.__24 {
      @include size(24, 24);
      background-image: url(/assets/images/icons/ico-24.png);

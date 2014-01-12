@@ -114,8 +114,8 @@ $focus: false; // .. true / false
 // .. Links
 //
 $link-color: $base-color;
-$link-color-hover: #f21249;
-$link-color-active: #f21249;
+$link-color-hover: $major-color;
+$link-color-active: $major-color;
 $link-style: nn;        // .. nn / uu / un / nu
 $link-style-pseudo: uu; // .. nn / uu / un
 
