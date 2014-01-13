@@ -33,11 +33,28 @@
             %li.dropdown_menu_i
               %a{href: "#", class: "dropdown_menu_i_a"} UGR
     .bar_i.__contacts
-      +375 (29) 610-26-26
-      &nbsp;
-      +375 (29) 268-90-90
-      &nbsp;
-      %a{href: "/contacts"} Контакты
+      .bar_i_inner.tx.__center
+        +375 (29) 610-26-26
+        &nbsp;
+        +375 (29) 268-90-90
+        &nbsp;
+        %a{href: "/contacts"} Контакты
+      .dropdown
+        .dropdown_inner
+          .contacts
+            .contacts_cell.__phone.tx.__center
+              %p.m-b_1 +375 (29) 610-26-26
+              %p +375 (29) 268-90-90
+            .contacts_cell.__links.p-l_3
+              %p
+                E-mail:
+                %i.ico.__16.__mail.va-m
+                %a{href: "mailto: info@pudra.by"} info@pudra.by
+              %p
+                Skype:
+                %i.ico.__16.__skype.va-m
+                info_pudra.by
+
     .bar_i.__authorize
       .bar_i_inner
         %i.ico.__20.__user.va-m

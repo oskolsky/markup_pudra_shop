@@ -23,6 +23,8 @@
     @include size(16, 16);
     background-image: url(/assets/images/icons/ico-16.png);
     &.__pront {background-position: 0 0;}
+    &.__mail  {background-position: -16px 0;}
+    &.__skype {background-position: -32px 0;}
   }
   &.__20 {
     @include size(20, 20);
