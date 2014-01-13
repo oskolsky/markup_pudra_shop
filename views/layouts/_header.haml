@@ -1,7 +1,21 @@
 %header#header.header{role: "banner"}
   .ctn
-    .grid
-      .grid-i.__grid-2.va-m
-        %a{href: "/"}
-          %img{src: "/assets/images/logo.png", class: "va-t", width: 130, height: 111, alt: "Магазин косметики Pudra.by"}
-      .grid-i.__grid-10.va-m
+
+    .header_i.__logo
+      %a{href: "/"}
+        %img{src: "/assets/images/logo.png", class: "va-t", width: 130, height: 111, alt: "Магазин косметики Pudra.by"}
+
+    .header_i.__about
+      %figure
+        %a{href: "#", class: 'header_i_a'} О магазине
+        %figcaption.header_i_caption
+
+    .header_i.__wish
+      %figure
+        %a{href: "#", class: 'header_i_a a __pseudo'} Виш-лист
+        %figcaption.header_i_caption
+
+    .header_i.__basket
+      %figure
+        %a{href: "#", class: 'header_i_a a __pseudo'} Корзина
+        %figcaption.header_i_caption
