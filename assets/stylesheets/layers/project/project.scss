@@ -40,16 +40,27 @@
       }
     }
     &.__location {
-      width: 130px;
+      width: 120px;
     }
     &.__currency {
-      width: 125px;
+      width: 120px;
     }
     &.__contacts {
       font-size: 16px;
       font-weight: 700;
       text-transform: uppercase;
-      width: 465px;
+      position: relative;
+      width: 480px;
+      &::after {
+        content: '\f078';
+        font-size: 12px;
+        font-family: FontAwesome;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        z-index: 999;
+        @include prefixes(transform, translate(0, -50%));
+      }
       a {
         text-decoration: underline;
         &:hover {
@@ -82,6 +93,11 @@
       &.__location, &.__currency {
         &:hover {
           .bar_i_inner > a {&::after {content: '\f077';}}
+        }
+      }
+      &.__contacts {
+        &:hover {
+          &::after {content: '\f077';}
         }
       }
     }
