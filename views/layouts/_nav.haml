@@ -1,8 +1,9 @@
 %nav#nav.nav{role: "navigation"}
   .ctn
     %ul.menu
-      %li.menu_i
-        %a{href: "/catalog", class: "menu_i_a __current"} Каталоги
+      %li.menu_i.__dropdown
+        %a{href: "/catalog", class: "menu_i_a"} Каталоги
+        = haml '/views/common/_catalogs'.to_sym
       %li.menu_i
         %a{href: "/brands", class: "menu_i_a"} Бренды
       %li.menu_i

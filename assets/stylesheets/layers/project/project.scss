@@ -175,6 +175,28 @@
 }
   .menu_i {
     display: inline-block;
+    &:hover {
+      background-color: $major-color;
+    }
+    &.__dropdown {
+      &:hover {
+        position: relative;
+        > ul {display: block !important;}
+        &::before {
+          content: '';
+          border-left:  7px solid transparent;
+          border-right: 7px solid transparent;
+          border-top:   7px solid $major-color;
+          height: 0;
+          width: 0;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          z-index: 9999;
+          @include prefixes(transform, translate(-50%, 0));
+        }
+      }
+    }
   }
     .menu_i_a {
       color: #fff;
@@ -185,27 +207,148 @@
       line-height: 50px;
       padding: 0 20px;
       text-transform: uppercase;
-      @include prefixes(transition, all .33s);
-      &:hover, &.__current {
-        background-color: $major-color;
+      &:hover {
         color: #fff;
       }
-      &.__current {
-        position: relative;
-        &::after {
-          content: '';
-          border-left: 8px solid transparent;
-          border-right: 8px solid transparent;
-          border-top: 8px solid $major-color;
-          height: 0;
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          margin-left: -8px;
-          width: 0;
+    }
+
+  //
+  // .. Dropdown menu
+  //
+  .menu .menu_i.__dropdown {
+    > ul {
+      background-color: #fff;
+      box-shadow: 0 0 15px 5px rgba(0, 0, 0, .1);
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 10px 0;
+      width: 280px;
+      z-index: 9998;
+    }
+    > ul > li {
+      &:first-child {
+        > a {
+          &::before {display: none;}
         }
       }
+      &:hover {
+        > a  {
+          color: $link-color-hover;
+          &::after {display: block;}
+        }
+        > ul {display: block;}
+      }
     }
+    > ul > li > a {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 15px;
+      padding: 12px 60px 12px 30px;
+      position: relative;
+      text-transform: uppercase;
+      &::before {
+        background-color: $muted-color;
+        content: '';
+        height: 1px;
+        position: absolute;
+        top: 0;
+        right: 30px;
+        left: 30px;
+      }
+      &::after {
+        border-top:    7px solid transparent;
+        border-left:   7px solid #fff;
+        border-bottom: 7px solid transparent;
+        content: '';
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: -7px;
+        height: 0;
+        width: 0;
+        z-index: 9999;
+        @include prefixes(transform, translate(0, -50%));
+      }
+      .fa {
+        font-size: 10px;
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        @include prefixes(transform, translate(0, -50%));
+      }
+    }
+    > ul > li > ul {
+      background-color: rgba(39, 39, 39, .95);
+      display: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      padding: 10px 0;
+      width: 280px;
+      z-index: 9998;
+    }
+    > ul > li > ul > li {
+      &:first-child {
+        > a {
+          &::before {display: none;}
+        }
+      }
+      &:hover {
+        > a   {
+          color: $link-color-hover;
+          &::after {display: block;}
+        }
+        > div {display: block;}
+      }
+    }
+    > ul > li > ul > li > a {
+      color: #fff;
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 15px;
+      padding: 12px 30px;
+      position: relative;
+      &::before {
+        background-color: #3d3d3d;
+        content: '';
+        height: 1px;
+        position: absolute;
+        top: 0;
+        right: 30px;
+        left: 30px;
+      }
+      &::after {
+        border-top:    7px solid transparent;
+        border-left:   7px solid #3d3d3d;
+        border-bottom: 7px solid transparent;
+        content: '';
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: -7px;
+        height: 0;
+        width: 0;
+        z-index: 9999;
+        @include prefixes(transform, translate(0, -50%));
+      }
+      &:hover {
+        color: $link-color-hover;
+      }
+    }
+    > ul > li > ul > li > div {
+      display: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      width: 380px;
+    }
+  }
 
 //
 // .. SEARCH
