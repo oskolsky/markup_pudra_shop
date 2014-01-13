@@ -1,68 +1,57 @@
 %section#bar.bar
   .ctn
-    .grid.__no-gutter
-
-      .bar_i.__location.grid-i.__grid-2
-        .bar_i_cell
-          .bar_i_inner.__location
-            Регион:&nbsp;
-            %a{href: "#", class: "bar_i_inner_a a __pseudo __inner"}
-              %span Беларусь
-          .dropdown
-            .dropdown_inner
-              %ul.dropdown_menu
-                %li.dropdown_menu_i
-                  %a{href: "#", class: "dropdown_menu_i_a"} Беларусь
-                %li.dropdown_menu_i
-                  %a{href: "#", class: "dropdown_menu_i_a"} Казахстан
-                %li.dropdown_menu_i
-                  %a{href: "#", class: "dropdown_menu_i_a"} Украина
-                %li.dropdown_menu_i
-                  %a{href: "#", class: "dropdown_menu_i_a"} Россия
-
-      .bar_i.__currency.grid-i.__grid-2
-        .bar_i_cell
-          .bar_i_inner.__currency
-            Валюта:&nbsp;
-            %a{href: "#", class: "bar_i_inner_a a __pseudo __inner"}
-              %span BYR
-          .dropdown
-            .dropdown_inner
-              %ul.dropdown_menu
-                %li.dropdown_menu_i
-                  %a{href: "#", class: "dropdown_menu_i_a"} USD
-                %li.dropdown_menu_i
-                  %a{href: "#", class: "dropdown_menu_i_a"} EUR
-                %li.dropdown_menu_i
-                  %a{href: "#", class: "dropdown_menu_i_a"} RUB
-                %li.dropdown_menu_i
-                  %a{href: "#", class: "dropdown_menu_i_a"} UGR
-
-      .bar_i.__contacts.grid-i.__grid-5
-        .bar_i_cell
-          .bar_i_inner.__contacts
-            +375 (29) 610-26-26
-            &nbsp;
-            +375 (29) 268-90-90
-          .dropdown
-            .dropdown_inner
-
-      .bar_i.__user.grid-i.__grid-3
-        .bar_i_cell
-          .bar_i_inner
-            %i.ico.__20.__user.va-m
-            %span.va-m Моя пудра
-          .bar_i_inner
-            %a{href: "#", data: {dialog: "true", url: "/dialogs/_login"}} Войти
-          .dropdown
-            .dropdown_inner
-              .authorized
-                %figure.authorized_user
-                  %img{src: "/assets/images/fake/user.png", class: "authorized_user_avatar", width: 50, height: 50, alt: "Черновец Татьяна"}
-                  %figcaption.authorized_user_caption
-                    %p.authorized_user_name Черновец Татьяна
-                    %p.authorized_user_status Статус: Cеребро
-                %nav
-                  %a{href: "#"} Личный кабинет
-                  %br
-                  %a{href: "#"} Мои заказы
+    .bar_i.__location
+      .bar_i_inner
+        Регион:&nbsp;
+        %a{href: "#", class: "a __pseudo __inner"}
+          %span Беларусь
+      .dropdown
+        .dropdown_inner
+          %ul.dropdown_menu
+            %li.dropdown_menu_i
+              %a{href: "#", class: "dropdown_menu_i_a"} Беларусь
+            %li.dropdown_menu_i
+              %a{href: "#", class: "dropdown_menu_i_a"} Казахстан
+            %li.dropdown_menu_i
+              %a{href: "#", class: "dropdown_menu_i_a"} Украина
+            %li.dropdown_menu_i
+              %a{href: "#", class: "dropdown_menu_i_a"} Россия
+    .bar_i.__currency
+      .bar_i_inner
+        Валюта:&nbsp;
+        %a{href: "#", class: "a __pseudo __inner"}
+          %span BYR
+      .dropdown
+        .dropdown_inner
+          %ul.dropdown_menu
+            %li.dropdown_menu_i
+              %a{href: "#", class: "dropdown_menu_i_a"} USD
+            %li.dropdown_menu_i
+              %a{href: "#", class: "dropdown_menu_i_a"} EUR
+            %li.dropdown_menu_i
+              %a{href: "#", class: "dropdown_menu_i_a"} RUB
+            %li.dropdown_menu_i
+              %a{href: "#", class: "dropdown_menu_i_a"} UGR
+    .bar_i.__contacts
+      +375 (29) 610-26-26
+      &nbsp;
+      +375 (29) 268-90-90
+      &nbsp;
+      %a{href: "/contacts"} Контакты
+    .bar_i.__authorize
+      .bar_i_inner
+        %i.ico.__20.__user.va-m
+        %span.va-m Моя пудра
+      .dropdown
+        .dropdown_inner
+          .authorized
+            %figure.authorized_user
+              %img{src: "/assets/images/fake/user.png", class: "authorized_user_avatar", width: 50, height: 50, alt: "Черновец Татьяна"}
+              %figcaption.authorized_user_caption
+                %p.authorized_user_name Черновец Татьяна
+                %p.authorized_user_status Статус: Cеребро
+            %nav
+              %a{href: "#"} Личный кабинет
+              %br
+              %a{href: "#"} Мои заказы
+      -#%a{href: "#", data: {dialog: "true", url: "/dialogs/_login"}} Войти
