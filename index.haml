@@ -1,6 +1,37 @@
 %section.section.__home{role: "region", "aria-label" => ""}
   .ctn
     .p-t_4
+
+      %nav.home-nav.m-b_2
+        = haml '/views/common/_catalogs'.to_sym
+        .d-ib.va-t
+          .imageslider.__promo
+            .slider
+              - 1.upto(3) do
+                %a{href: "#", class: "slide"}
+                  %img{src: "/assets/images/fake/promo_#{rand(2..3)}.jpg", width: "660", height: "360", alt: ""}
+            %ul.slider-nav
+
+      .m-b_4
+        .layer
+          .iosslider.__catalog
+            .slider
+              - 1.upto(5) do
+                .slide
+                  .items
+                    - 1.upto(4) do
+                      = haml '/views/common/item/_item_new'.to_sym
+            %ul.slider-nav
+              %li.slider-nav_i.__current
+              - 1.upto(4) do
+                %li.slider-nav_i
+            %a{href: "/catalog", class: "slider-more"} Все новинки
+
+
+
+
+
+
       -#.m-b_4
         #tabs.tabs.__catalog
           %ul

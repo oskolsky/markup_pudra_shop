@@ -6,6 +6,18 @@ $(function() {
 
   //****************************************************************************************************
   //
+  // .. HOME NAVIGATION
+  //
+  //****************************************************************************************************
+  if ($('.home-nav').length > 0) {
+    var h = $('.home-nav').find('> ul').outerHeight();
+    $('.home-nav').find('.imageslider').find('img').css({height: h + 'px'});
+  }
+
+
+
+  //****************************************************************************************************
+  //
   // .. ITEMS
   //
   //****************************************************************************************************
@@ -129,8 +141,7 @@ $(function() {
 
   $('.iosslider').each(function() {
     $(this).iosSlider({
-      autoSlide: true,
-      autoSlideTimer: 5000,
+      autoSlide: false,
       navSlideSelector: $(this).find('.slider-nav').find('.slider-nav_i'),
       responsiveSlideContainer: false,
       responsiveSlides: false,
