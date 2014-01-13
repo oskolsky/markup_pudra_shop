@@ -29,6 +29,7 @@
     background-image: url(/assets/images/icons/ico-20.png);
     &.__user         {background-position: 0 0;}
     &.__user.__hover {background-position: 0 -20px;}
+    &.__times        {background-position: -20px 0;}
   }
   &.__24 {
      @include size(24, 24);

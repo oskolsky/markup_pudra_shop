@@ -179,7 +179,10 @@ $(function() {
     
     $.arcticmodal({
       type: 'ajax',
-      url: url
+      url: url,
+      afterOpen: function() {
+        $('.form').customForm();
+      }
     });
     
     return false;

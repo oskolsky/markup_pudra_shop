@@ -72,22 +72,22 @@ $base-line-height-list: (1.5, 1.5, 1.5);
 $h-font-family: $base-font-family, Times, "Times New Roman", serif;
 
 $h1-font-size-list: (30px, 30px, 30px);
-$h2-font-size-list: (14px, 14px, 14px);
-$h3-font-size-list: (2.5rem, 2.5rem, 2.5rem);
+$h2-font-size-list: (20px, 20px, 20px);
+$h3-font-size-list: (14px, 14px, 14px);
 $h4-font-size-list: (2rem, 2rem, 2rem);
 $h5-font-size-list: (inherit, inherit, inherit);
 $h6-font-size-list: (inherit, inherit, inherit);
 
 $h1-font-weight-list: (700, 700, 700);
 $h2-font-weight-list: (700, 700, 700);
-$h3-font-weight-list: (600, 600, 600);
+$h3-font-weight-list: (700, 700, 700);
 $h4-font-weight-list: (600, 600, 600);
 $h5-font-weight-list: (600, 600, 600);
 $h6-font-weight-list: (inherit, inherit, inherit);
 
 $h1-line-height-list: (16px, 16px, 16px);
 $h2-line-height-list: (20px, 20px, 20px);
-$h3-line-height-list: (1.25, 1.25, 1.25);
+$h3-line-height-list: (25px, 25px, 25px);
 $h4-line-height-list: (1.375, 1.375, 1.375);
 $h5-line-height-list: (inherit, inherit, inherit);
 $h6-line-height-list: (inherit, inherit, inherit);
@@ -123,16 +123,16 @@ $link-style-pseudo: uu; // .. nn / uu / un
 // .. Forms
 //
 $form-el-bg: #fff;
-$form-el-border-color: #929292;
+$form-el-border-color: $muted-color;
 $form-el-border: 1px solid $form-el-border-color;
 $form-el-border-radius: 0;
-$form-el-color: #000;
+$form-el-color: $base-color;
 $form-el-color-required: #f90;
 $form-el-color-valid-true: #008000;
 $form-el-color-valid-false: #f00;
-$form-el-font-size: 13px;
-$form-el-line-height: 25px;
-$form-el-padding: .3rem .6rem;
+$form-el-font-size: 12px;
+$form-el-line-height: 30px;
+$form-el-padding: 6px 10px;
 $form-btn-padding: .3rem 1.2rem;
 
 //

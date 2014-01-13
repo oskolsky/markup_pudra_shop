@@ -55,8 +55,8 @@ yepnope([
       $.arcticmodal('setDefault', {
         overlay: {
           css: {
-            backgroundColor: '#000',
-            opacity: .66
+            backgroundColor: '#272727',
+            opacity: .5
           }
         },
         openEffect: {

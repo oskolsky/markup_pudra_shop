@@ -1,35 +1,48 @@
 .dialog {
-  padding: 4rem;
-  background: #fff;
 
   //
-  // .. Color
+  // .. Authorize
   //
-  &.__black {
-    background: #000;
-    color: #fff; 
+  &.__authorize {
+    background: #fff;
+    padding: 30px 50px 50px;
+    width: 640px;
+    @include prefixes(box-sizing, border-box);
+    &::before {
+      background-color: $muted-color;
+      content: '';
+      position: absolute;
+      top: 100px;
+      bottom: 40px;
+      left: 310px;
+      width: 1px;
+    }
+    &::after {
+      background-color: $muted-color;
+      border-radius: 100%;
+      color: #fff;
+      content: 'Или';
+      height: 32px;
+      font-size: 12px;
+      line-height: 32px;
+      position: absolute;
+      top: 150px;
+      left: 294px;
+      text-align: center;
+      width: 32px;
+    }
+    a {
+      color: $link-color-hover;
+      text-decoration: underline;
+      &:hover {text-decoration: none;}
+    }
   }
 
-  //
-  // .. Size
-  //
-  &.__narrow {
-    padding: 2rem;
-    .dialog_close {
-      top: .5rem;
-      right: .5rem;
-    }
-  }
-  &.__wide   {
-    padding: 8rem;
-    .dialog_close {
-      top: 1.5rem;
-      right: 1.5rem;
-    }
-  }
 }
   .dialog_close {
+    background-color: $base-color !important;
+    border: 10px solid $base-color;
     cursor: pointer;
-    top: 1rem;
-    right: 1rem;
+    top: 0;
+    right: 0;
   }

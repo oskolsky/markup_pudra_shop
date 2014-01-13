@@ -24,17 +24,18 @@ input {
 // .. Button, reset, submit
 //
 .form_button {
-  padding: $form-btn-padding;
-  border: $form-el-border;
-  border-radius: $form-el-border-radius;
-  color: $form-el-color;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
   cursor: pointer;
   font-size: $form-el-font-size;
   line-height: $form-el-line-height;
+  padding: 0 20px;
+  text-transform: uppercase;
   @include prefixes(box-sizing, border-box);
-  @include linear-gradient(vertical, #eee, #ddd);
-  &:not([disabled]):hover {box-shadow: inset 0 0 .3em rgba(0, 0, 0, .1);}
-  &:not([disabled]):active { @include linear-gradient(vertical, #ddd, #eee); }
+  @include linear-gradient(horizontal, #e62368, #f60c40);
+  //&:not([disabled]):hover {box-shadow: inset 0 0 .3em rgba(0, 0, 0, .1);}
+  //&:not([disabled]):active { @include linear-gradient(vertical, #ddd, #eee); }
 }
 a.form_button {
   text-decoration: none;
@@ -52,7 +53,7 @@ a.form_button {
   border-radius: $form-el-border-radius;
   color: $form-el-color;
   font-size: $form-el-font-size;
-  line-height: $form-el-line-height;
+  //line-height: $form-el-line-height;
   @include prefixes(box-sizing, border-box);
 }
 
@@ -197,11 +198,11 @@ a.form_button {
 .form_label {
   color: $form-el-color;
   font-size: $form-el-font-size;
-  line-height: $form-el-line-height;
+  line-height: 30px;
   .form_checkbox,
   .form_radio {
     &.__fake {
-      top: 2px;
+      top: 3px;
       vertical-align: baseline;
     }
   }

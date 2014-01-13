@@ -5,14 +5,36 @@
         %img{src: "/assets/images/logo.png", class: "va-t", width: 130, height: 111, alt: "Магазин косметики Pudra.by"}
 
     %nav.demo
-      %ul.m-b_2
-        %li
-          %a{href: "https://github.com/oskolsky/markup_pudra_shop"} View Source on GitHub
-      
-      %ol
-        %li 
-          %a{href: "/"} Главная
-        %li 
-          %a{href: "/catalog"} Каталог
-        %li
-          %a{href: "/catalog_show"} Просмотр товара
+
+      .m-b_3
+        %ul
+          %li
+            %a{href: "https://github.com/oskolsky/markup_pudra_shop"} View Source on GitHub
+
+      .m-b_3
+        %p.m-b_2
+          %b Диалоговые окна:
+        %ol
+          %li
+            %a{href: "#", data: {dialog: "true", url: "/dialogs/_login"}} Авторизация
+          %li
+            %a{href: "#", data: {dialog: "true", url: "/dialogs/_register"}} Регистрация
+          %li
+            %a{href: "#", data: {dialog: "true", url: "/dialogs/_forgot"}} Восстановление пароля
+
+      .m-b_3
+        %p.m-b_2
+          %b Страницы:
+        %ol
+          %li
+            %a{href: "/"} Главная
+          %li
+            %a{href: "/catalog"} Каталог товаров
+          %li
+            %a{href: "/catalog_show"} Страница товара
+          %li
+            %a{href: "/catalog_show"} Корзина
+          %li
+            %a{href: "/catalog_show"} Оформление заказа
+          %li
+            %a{href: "/catalog_show"} Оплата
