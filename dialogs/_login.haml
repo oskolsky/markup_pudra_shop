@@ -22,12 +22,12 @@
         %div.m-b_1
           %input{type: "submit", class: "form_button", value: "Войти на сайт"}
         %div.m-b_2
-          %a{href: "#", class: "tx __12"} Забыли пароль?
+          %a{href: "#", class: "tx __12", data: {dialog: "true", url: "/dialogs/_forgot"}} Забыли пароль?
         %div.tx.__12
           %p.tx.__upper
             %b Первый раз на сайте?
           %p
-            %a{href: "#", class: "tx __12"} Регистрация
+            %a{href: "#", class: "tx __12", data: {dialog: "true", url: "/dialogs/_register"}} Регистрация
     .grid-i.__grid-1
     .grid-i.__grid-3
       .p-l_1

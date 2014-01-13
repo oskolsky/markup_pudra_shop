@@ -176,7 +176,8 @@ $(function() {
   //
   $(document).on('click touchstart', '[data-dialog="true"]', function() {
     var url = $(this).data('url');
-    
+    $.arcticmodal('close');
+
     $.arcticmodal({
       type: 'ajax',
       url: url,
