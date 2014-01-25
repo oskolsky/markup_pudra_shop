@@ -24,9 +24,9 @@
     &.__bgs      {@include size(69, 31); background-position: -319px 0;}
   }
   &.__socialbtn {
+    @include size(210, 40);
     background-image: url(/assets/images/sprites/sprite-social-btn.png);
     vertical-align: top;
-    @include size(210, 40);
     &.__fb   {background-position: 0 0;}
     &.__vk   {background-position: 0 -40px;}
     &.__ok   {background-position: 0 -80px;}

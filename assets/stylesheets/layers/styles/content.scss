@@ -122,9 +122,9 @@
   font-weight: 700;
 }
 .cnt dd {
+  @extend %lists-nesting;
   margin-left: #{$content-factor * 2}rem;
   &:not(:last-child) {margin-bottom: #{$content-factor / 2}rem;}
-  @extend %lists-nesting;
 }
 
 .cnt ol {
@@ -193,26 +193,26 @@
 // .. Pre > code
 //
 .cnt pre {
-  counter-reset: list;
-  padding: #{$content-factor - .1}rem #{$content-factor}rem #{$content-factor - .1}rem #{$content-factor * 3}rem;
-  background: #eee;
-  border: 1px dotted #ccc;
-  white-space: normal;
   @extend .ox-h;
+  padding: #{$content-factor - .1}rem #{$content-factor}rem #{$content-factor - .1}rem #{$content-factor * 3}rem;
+  border: 1px dotted #ccc;
+  background: #eee;
+  counter-reset: list;
+  white-space: normal;
   > code {
+    @extend .tx.__xxl;
     position: relative;
     display: block;
     padding: 0;
     white-space: pre;
-    @extend .tx.__xxl;
     &::before {
-      counter-increment: list;
-      content: counter(list) ".";
       position: absolute;
       top: 0;
       right: 100%;
       margin-right: #{$content-factor}rem;
       color: #aaa;
+      content: counter(list) ".";
+      counter-increment: list;
     }
   }
 }

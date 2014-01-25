@@ -4,32 +4,32 @@
   // .. Authorize
   //
   &.__authorize {
-    background: #fff;
+    @include prefixes(box-sizing, border-box);
     padding: 30px 50px 50px;
     width: 640px;
-    @include prefixes(box-sizing, border-box);
+    background: #fff;
     &::before {
-      background-color: $muted-color;
-      content: '';
       position: absolute;
       top: 100px;
       bottom: 40px;
       left: 310px;
       width: 1px;
+      background-color: $muted-color;
+      content: '';
     }
     &::after {
-      background-color: $muted-color;
-      border-radius: 100%;
-      color: #fff;
-      content: 'Или';
-      height: 32px;
-      font-size: 12px;
-      line-height: 32px;
       position: absolute;
       top: 150px;
       left: 294px;
-      text-align: center;
       width: 32px;
+      height: 32px;
+      border-radius: 100%;
+      background-color: $muted-color;
+      color: #fff;
+      content: 'Или';
+      text-align: center;
+      font-size: 12px;
+      line-height: 32px;
     }
     a {
       color: $link-color-hover;
@@ -40,9 +40,9 @@
 
 }
   .dialog_close {
-    background-color: $base-color !important;
-    border: 10px solid $base-color;
-    cursor: pointer;
     top: 0;
     right: 0;
+    border: 10px solid $base-color;
+    background-color: $base-color !important;
+    cursor: pointer;
   }

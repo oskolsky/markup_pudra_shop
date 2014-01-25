@@ -7,46 +7,46 @@
 
 @mixin headers($list) {
   h1, .alpha {
+    line-height: nth($h1-line-height-list, $list);
     font: {
       weight: nth($h1-font-weight-list, $list);
       size: nth($h1-font-size-list, $list); 
     }
-    line-height: nth($h1-line-height-list, $list);
   }
   h2, .beta {
+    line-height: nth($h2-line-height-list, $list);
     font: {
       weight: nth($h2-font-weight-list, $list);
       size: nth($h2-font-size-list, $list);
     }
-    line-height: nth($h2-line-height-list, $list);
   }
   h3, .gamma {
+    line-height: nth($h3-line-height-list, $list);
     font: {
       weight: nth($h3-font-weight-list, $list);
       size: nth($h3-font-size-list, $list);
     }
-    line-height: nth($h3-line-height-list, $list);
   }
   h4, .delta {
+    line-height: nth($h4-line-height-list, $list);
     font: {
       weight: nth($h4-font-weight-list, $list);
       size: nth($h4-font-size-list, $list);
     }
-    line-height: nth($h4-line-height-list, $list);
   }
   h5, .epsilon {
+    line-height: nth($h5-line-height-list, $list);
     font: {
       weight: nth($h5-font-weight-list, $list);
       size: nth($h5-font-size-list, $list);
     }
-    line-height: nth($h5-line-height-list, $list);
   }
   h6, .zeta {
+    line-height: nth($h6-line-height-list, $list);
     font: {
       weight: nth($h6-font-weight-list, $list);
       size: nth($h6-font-size-list, $list);
     }
-    line-height: nth($h6-line-height-list, $list);
   }
 }
 
@@ -58,21 +58,21 @@
 //
 //****************************************************************************************************
 html {
-  @if $grid == "fixed" or $grid == "fluid" {font-size: nth($root-font-size-list, 1);}
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+  @if $grid == "fixed" or $grid == "fluid" {font-size: nth($root-font-size-list, 1);}
 }
 
 body {
-  @if $grid == "fixed" {min-width: #{$grid-fixed-ctn-width}px;}
-  @if $grid == "fluid" {min-width: (nth($min-width-list, 1) + 20);}
   background: $base-bg;
   color: $base-color;
+  -webkit-backface-visibility: hidden; // .. http://goo.gl/bNpRD4
+  @if $grid == "fixed" {min-width: #{$grid-fixed-ctn-width}px;}
+  @if $grid == "fluid" {min-width: (nth($min-width-list, 1) + 20);}
   font: {
     weight: $base-font-weight;
     family: $base-font-family;
   }
-  -webkit-backface-visibility: hidden; // .. http://goo.gl/bNpRD4
 }
 
 @include body(1);
