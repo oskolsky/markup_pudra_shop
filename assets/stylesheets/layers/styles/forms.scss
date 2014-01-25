@@ -82,8 +82,10 @@ a.form_button {
     content:"\f00c";
     margin: -1px 0 0 1px;
     color: #f21249;
-    font-family: FontAwesome;
-    font-size: 10px;
+    font: {
+      family: FontAwesome;
+      size: 10px;
+    }
     text-align: center;
   }
   &[data-checked="true"][disabled]::after {opacity: .33;}
@@ -105,9 +107,11 @@ a.form_button {
       content: "\f111";
       margin: -1px 0 0 -1px;
       color: fade-out($form-el-color, .3);
-      font-family: FontAwesome;
-      font-size: .8rem;
-      text-align: center;
+      font: {
+        family: FontAwesome;
+        size: .8rem;
+        align: center;
+      }
     }
     &[disabled]::after {opacity: .33;}
   }
@@ -135,9 +139,11 @@ a.form_button {
     border: $form-el-border;
     border-radius: $form-el-border-radius;
     color: #aaa;
-    font-family: FontAwesome;
-    font-size: $form-el-font-size;
-    text-align: center;
+    font: {
+      family: FontAwesome;
+      size: $form-el-font-size;
+      align: center;
+    }
     @include prefixes(box-sizing, border-box);
     @include prefixes(transform, translate(0, -50%));
   }
@@ -168,10 +174,14 @@ a.form_button {
     border: $form-el-border;
     border-radius: $form-el-border-radius;
     color: #aaa;
-    font-family: FontAwesome;
-    font-size: 1rem;
-    text-align: center;
-    text-indent: -.1rem;
+    font: {
+      family: FontAwesome;
+      size: 1rem;
+    }
+    text: {
+      align: center;
+      indent: -.1rem;
+    }
     @include prefixes(box-sizing, border-box);
     @include prefixes(transform, translate(0, -50%));
   }
@@ -235,8 +245,10 @@ a.form_button {
     top: -.33rem;
     content: "\f069";
     color: fade-out($form-el-color-required, .3);
-    font-family: FontAwesome;
-    font-size: 70%;
+    font: {
+      family: FontAwesome;
+      size: 70%;
+    }
     line-height: 1;
   }
   [data-required="before"]::before {margin-left: -1.5rem;}

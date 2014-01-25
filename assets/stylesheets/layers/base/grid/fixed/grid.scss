@@ -45,7 +45,7 @@ $grid-fixed-ctn-width: ($grid-fixed-col-width + $grid-fixed-col-gutter) * $grid-
   .grid {
     &.__no-gutter {
       margin-bottom: 0;
-      margin-left: -#{$grid-fixed-col-gutter / 2};
+      margin-left: -#{$grid-fixed-col-gutter / 2}px;
       @include grid-fixed("> .grid-i.__prefix", "margin-left", 0);
     }
     @include grid-fixed(".grid-i.__prefix", "margin-left", $grid-fixed-col-gutter);
@@ -58,7 +58,7 @@ $grid-fixed-ctn-width: ($grid-fixed-col-width + $grid-fixed-col-gutter) * $grid-
   .grid {
     &.__no-gutter {
       margin-bottom: 0;
-      margin-left: -#{$grid-fixed-col-gutter / 2};
+      margin-left: -#{$grid-fixed-col-gutter / 2}px;
       @include grid-fixed("> .grid-i.__suffix", "margin-right", 0);
     }
     @include grid-fixed(".grid-i.__suffix", "margin-right", 0);

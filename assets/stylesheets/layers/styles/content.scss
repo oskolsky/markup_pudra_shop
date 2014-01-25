@@ -17,8 +17,8 @@
 //
 // .. Abbr, dfn
 //
-.ctn abbr[title],
-.ctn dfn[title] {
+.cnt abbr[title],
+.cnt dfn[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }
@@ -26,8 +26,8 @@
 //
 // .. Del, ins
 //
-.ctn del {text-decoration: line-through;}
-.ctn ins {
+.cnt del {text-decoration: line-through;}
+.cnt ins {
   padding: 0 .3em;
   background: #ff9;
   text-decoration: none;
@@ -36,19 +36,21 @@
 //
 // .. Mark
 //
-.ctn mark {
+.cnt mark {
   padding: 0 .3em;
   background: #ff9;
-  font-style: italic;
-  font-weight: 700;
+  font: {
+    weight: 700;
+    style: italic;
+  }
 }
 
 //
 // .. Quotes
 //
 .cnt q {
-  font-style: italic;
   quotes: "\00ab" "\00bb";
+  font-style: italic;
   &::before {content: open-quote;}
   &::after  {content: close-quote;}
 }
@@ -58,8 +60,10 @@
 // .. Small
 //
 .cnt small {
-  font-size: 90%;
-  font-weight: 700;
+  font: {
+    weight: 700;
+    size: 90%;
+  }
 }
 
 //
@@ -96,8 +100,10 @@
 .cnt blockquote {
   padding: #{$content-factor - .1}rem #{$content-factor}rem;
   border: 1px solid #eee;
-  font-style: italic;
-  font-size: 130%;
+  font: {
+    style: italic;
+    size: 130%;
+  }
 }
 
 //
@@ -140,9 +146,7 @@
 .cnt ol li,
 .cnt ul li {margin: 0 0 #{$content-factor / 2}rem #{$content-factor * 2}rem;}
 
-.cnt li {
-  @extend %lists-nesting;
-}
+.cnt li { @extend %lists-nesting; }
 
 //
 // .. Headings
@@ -194,14 +198,13 @@
   background: #eee;
   border: 1px dotted #ccc;
   white-space: normal;
-  -ms-overflow-x: auto; 
-      overflow-x: auto;
+  @extend .ox-h;
   > code {
     position: relative;
     display: block;
     padding: 0;
-    font-size: 100%;
     white-space: pre;
+    @extend .tx.__xxl;
     &::before {
       counter-increment: list;
       content: counter(list) ".";
@@ -223,8 +226,8 @@
   th,
   td {padding: #{$content-factor / 2}rem #{$content-factor}rem;}
   caption {
-    font-style: italic;
     text-align: right;
+    font-style: italic;
   }
   th {
     background: #ddd;
@@ -232,8 +235,8 @@
   }
   th,
   tbody td {
-    border-bottom: 1px solid #ccc;
     padding-bottom: #{($content-factor / 2) - .1}rem;
+    border-bottom: 1px solid #ccc;
   }
   tfoot td {background: #eee;}
 }

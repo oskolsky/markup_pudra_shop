@@ -1,3 +1,62 @@
+@mixin body($list) {
+  body {
+    font-size: nth($base-font-size-list, 1);
+    line-height: nth($base-line-height-list, 1);
+  }
+}
+
+@mixin headers($list) {
+  h1, .alpha {
+    font: {
+      weight: nth($h1-font-weight-list, $list);
+      size: nth($h1-font-size-list, $list); 
+    }
+    line-height: nth($h1-line-height-list, $list);
+  }
+  h2, .beta {
+    font: {
+      weight: nth($h2-font-weight-list, $list);
+      size: nth($h2-font-size-list, $list);
+    }
+    line-height: nth($h2-line-height-list, $list);
+  }
+  h3, .gamma {
+    font: {
+      weight: nth($h3-font-weight-list, $list);
+      size: nth($h3-font-size-list, $list);
+    }
+    line-height: nth($h3-line-height-list, $list);
+  }
+  h4, .delta {
+    font: {
+      weight: nth($h4-font-weight-list, $list);
+      size: nth($h4-font-size-list, $list);
+    }
+    line-height: nth($h4-line-height-list, $list);
+  }
+  h5, .epsilon {
+    font: {
+      weight: nth($h5-font-weight-list, $list);
+      size: nth($h5-font-size-list, $list);
+    }
+    line-height: nth($h5-line-height-list, $list);
+  }
+  h6, .zeta {
+    font: {
+      weight: nth($h6-font-weight-list, $list);
+      size: nth($h6-font-size-list, $list);
+    }
+    line-height: nth($h6-line-height-list, $list);
+  }
+}
+
+
+
+//****************************************************************************************************
+//
+// .. STYLES
+//
+//****************************************************************************************************
 html {
   @if $grid == "fixed" or $grid == "fluid" {font-size: nth($root-font-size-list, 1);}
   -webkit-text-size-adjust: 100%;
@@ -7,12 +66,16 @@ html {
 body {
   @if $grid == "fixed" {min-width: #{$grid-fixed-ctn-width}px;}
   @if $grid == "fluid" {min-width: (nth($min-width-list, 1) + 20);}
-  background:  $base-bg;
-  color:       $base-color;
-  font-family: $base-font-family;
-  font-weight: $base-font-weight;
+  background: $base-bg;
+  color: $base-color;
+  font: {
+    weight: $base-font-weight;
+    family: $base-font-family;
+  }
   -webkit-backface-visibility: hidden; // .. http://goo.gl/bNpRD4
 }
+
+@include body(1);
 
 img {font-style: italic;}
 
@@ -23,45 +86,15 @@ img {font-style: italic;}
 // .. HEADINGS
 //
 //****************************************************************************************************
-h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {font-family: $h-font-family;}
+h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {
+  font-family: $h-font-family;
+  &.format-money > i,
+   .format-money > i {font-size: 85%;}
+}
 
 @if $grid == "fixed" or $grid == "fluid"  {
   
-  body {
-    font-size:   nth($base-font-size-list, 1);
-    line-height: nth($base-line-height-list, 1);
-  }
-
-  h1, .alpha {
-    font-size:   nth($h1-font-size-list, 1);
-    font-weight: nth($h1-font-weight-list, 1); 
-    line-height: nth($h1-line-height-list, 1);
-  }
-  h2, .beta {
-    font-size:   nth($h2-font-size-list, 1);
-    font-weight: nth($h2-font-weight-list, 1);
-    line-height: nth($h2-line-height-list, 1);
-  }
-  h3, .gamma {
-    font-size:   nth($h3-font-size-list, 1);
-    font-weight: nth($h3-font-weight-list, 1);
-    line-height: nth($h3-line-height-list, 1);
-  }
-  h4, .delta {
-    font-size:   nth($h4-font-size-list, 1);
-    font-weight: nth($h4-font-weight-list, 1);
-    line-height: nth($h4-line-height-list, 1);
-  }
-  h5, .epsilon {
-    font-size:   nth($h5-font-size-list, 1);
-    font-weight: nth($h5-font-weight-list, 1);
-    line-height: nth($h5-line-height-list, 1);
-  }
-  h6, .zeta {
-    font-size:   nth($h6-font-size-list, 1);
-    font-weight: nth($h6-font-weight-list, 1);
-    line-height: nth($h6-line-height-list, 1);
-  }
+  @include headers(1);
 
 }
 
@@ -94,10 +127,10 @@ h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {font-fam
 //
 // .. Vertical-align
 //
-.va-bl {vertical-align: baseline !important;}
-.va-t  {vertical-align: top      !important;}
-.va-m  {vertical-align: middle   !important;}
-.va-b  {vertical-align: bottom   !important;}
+.va-bl {vertical-align: baseline;}
+.va-t  {vertical-align: top;}
+.va-m  {vertical-align: middle;}
+.va-b  {vertical-align: bottom;}
 
 
 
@@ -109,7 +142,10 @@ h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {font-fam
 //
 // .. Currency
 //
-.format-money > i {font-size: 95%;}
+.format-money {
+  white-space: nowrap;
+  > i {font-size: 95%;}
+}
 
 //
 // .. Numbered list
@@ -128,15 +164,13 @@ h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {font-fam
   &[class*="__cols-"] { @include prefixes(column-gap, 2%); }
   
   @for $i from 2 through 4 {
-    @if $grid == "fixed" { &.__cols-#{$i} { @include prefixes(column-count, $i);} }
-    @if $grid == "fluid" { &.__cols-#{$i} { @include prefixes(column-count, $i);} }
+    @if $grid == "fixed" or $grid == "fluid" { &.__cols-#{$i} { @include prefixes(column-count, $i);} }
   }
   
   &.__color {
-    &.__black  {color: black;}
-    &.__gray   {color: gray;}
-    &.__silver {color: silver;}
-    &.__white  {color: white;}
+    &.__major {color: $major-color;}
+    &.__minor {color: $minor-color;}
+    &.__muted {color: $muted-color;}
   }
 
   &.__muted {
@@ -147,7 +181,7 @@ h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {font-fam
   &.__11 {font-size: 11px;}
   &.__12 {font-size: 12px;}
   &.__13 {font-size: 13px;}
-  &.__14 {font-size: 14px;}
+  &.__14 {font-size: 14px;}  
 
   &.__xxs {font-size: $tx-xxs-font-size;}
   &.__xs  {font-size: $tx-xs-font-size;}

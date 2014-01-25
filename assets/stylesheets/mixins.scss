@@ -19,6 +19,7 @@
 
 }
 
+// .. Used in development. In production compiled CSS passed through autoprefixer (https://github.com/ai/autoprefixer)
 @mixin prefixes($property, $value) {
   -webkit-#{$property}: $value;
      -moz-#{$property}: $value;

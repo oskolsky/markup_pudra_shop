@@ -1297,11 +1297,11 @@
         &::before {left: 180px;}
         &::after  {left: 720px;}
       }
-      h2 {margin-bottom: 5px;}
+      h3 {margin-bottom: 5px;}
       ul {
         li {
           line-height: 14px;
-          &:not(:last-child) {margin-bottom: 5px;}
+          &:not(:last-child) {margin-bottom: 7px;}
           a {
             font-size: 12px;
             line-height: inherit;
