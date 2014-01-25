@@ -1,3 +1,40 @@
+//****************************************************************************************************
+//
+// .. EVENTS
+//
+//****************************************************************************************************
+//
+// .. Open dialog
+//
+$(document).on('click touchstart', '[data-dialog="true"]', function() {
+  var url = $(this).data('url');
+  $.arcticmodal('close');
+
+  $.arcticmodal({
+    type: 'ajax',
+    url: url,
+    afterOpen: function() {
+      $('.form').customForm();
+    }
+  });
+  
+  return false;
+});
+
+//
+// .. Close dialog
+//
+$(document).on('click touchstart', '.js-dialog_close', function() {
+  $.arcticmodal('close');
+});
+
+
+
+//****************************************************************************************************
+//
+// .. READY
+//
+//****************************************************************************************************
 $(function() {
   
   $('#footer').stickyFooter();
@@ -161,39 +198,6 @@ $(function() {
       }
     });
 
-  });
-
-
-
-
-  //****************************************************************************************************
-  //
-  // .. DIALOGS
-  //
-  //****************************************************************************************************
-  //
-  // .. Open dialog
-  //
-  $(document).on('click touchstart', '[data-dialog="true"]', function() {
-    var url = $(this).data('url');
-    $.arcticmodal('close');
-
-    $.arcticmodal({
-      type: 'ajax',
-      url: url,
-      afterOpen: function() {
-        $('.form').customForm();
-      }
-    });
-    
-    return false;
-  });
-
-  //
-  // .. Close dialog
-  //
-  $(document).on('click touchstart', '.js-dialog_close', function() {
-    $.arcticmodal('close');
   });
 
 

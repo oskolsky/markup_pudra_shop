@@ -8,21 +8,11 @@
         %div.m-b_2
           %label.form_label.tx.__upper.form_el.__bold
             %b E-mail:
-          %input{type: "text", class: "form_text form_el __block"}
+          %input.form_text.form_el.__block{type: "text"}
         %div
-          %input{type: "submit", class: "form_button", value: "Отправить"}
+          %input.form_button{type: "submit", value: "Отправить"}
     .grid-i.__grid-3.__prefix-1
       .p-l_1
         %label.form_label.tx.__upper.form_el.__bold.m-b_1
           %b Войти, используя соцсети:
-        .m-b_2
-          %a{href: "#"}
-            %img{src: "/assets/images/blank.gif", class: "sprites __socialbtn __fb fa-t", width: 210, height: 40, alt: "facebook.com"}
-        .m-b_2
-          %a{href: "#"}
-            %img{src: "/assets/images/blank.gif", class: "sprites __socialbtn __vk fa-t", width: 210, height: 40, alt: "vk.com"}
-        .m-b_2
-          %a{href: "#"}
-            %img{src: "/assets/images/blank.gif", class: "sprites __socialbtn __ok fa-t", width: 210, height: 40, alt: "odnoklassniki.ru"}
-        %a{href: "#"}
-          %img{src: "/assets/images/blank.gif", class: "sprites __socialbtn __mail fa-t", width: 210, height: 40, alt: "mail.ru"}
+        = haml '/dialogs/_social'.to_sym

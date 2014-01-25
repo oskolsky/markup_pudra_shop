@@ -1,7 +1,9 @@
 .ico {
   display: inline-block;
-  background-color: transparent;
-  background-repeat: no-repeat;
+  background: {
+    color: transparent;
+    repeat: no-repeat;
+  }
   &.__social {
     @include size(30, 30);
     background-image: url(/assets/images/icons/ico-social.png);

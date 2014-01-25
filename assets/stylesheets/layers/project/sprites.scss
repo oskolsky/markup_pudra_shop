@@ -1,7 +1,9 @@
 .sprites {
   display: inline-block;
-  background-color: transparent;
-  background-repeat: no-repeat;
+  background: {
+    color: transparent;
+    repeat: no-repeat;
+  }  
   &.__payment {
     @include size(140, 55);
     background-image: url(/assets/images/sprites/sprite-payment.jpg);

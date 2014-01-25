@@ -8,11 +8,11 @@
         %div.m-b_1
           %label.form_label.tx.__upper.form_el.__bold
             %b E-mail:
-          %input{type: "text", class: "form_text form_el __block"}
+          %input.form_text.form_el.__block{type: "text"}
         %div.m-b_1
           %label.form_label.tx.__upper.form_el.__bold
             %b Пароль:
-          %input{type: "password", class: "form_text form_el __block"}
+          %input.form_text.form_el.__block{type: "password"}
         %div.m-b_1
           %label.form_label
             %span.form_checkbox.form_el.__fake
@@ -20,26 +20,16 @@
             &nbsp;
             Запомнить меня
         %div.m-b_1
-          %input{type: "submit", class: "form_button", value: "Войти на сайт"}
+          %input.form_button{type: "submit", value: "Войти на сайт"}
         %div.m-b_2
-          %a{href: "#", class: "tx __12", data: {dialog: "true", url: "/dialogs/_forgot"}} Забыли пароль?
+          %a.tx.__12{href: "#", data: {dialog: "true", url: "/dialogs/_forgot"}} Забыли пароль?
         %div.tx.__12
           %p.tx.__upper
             %b Первый раз на сайте?
           %p
-            %a{href: "#", class: "tx __12", data: {dialog: "true", url: "/dialogs/_register"}} Регистрация
+            %a.tx.__12{href: "#", data: {dialog: "true", url: "/dialogs/_register"}} Регистрация
     .grid-i.__grid-3.__prefix-1
       .p-l_1
         %label.form_label.tx.__upper.form_el.__bold.m-b_1
           %b Войти, используя соцсети:
-        .m-b_2
-          %a{href: "#"}
-            %img{src: "/assets/images/blank.gif", class: "sprites __socialbtn __fb fa-t", width: 210, height: 40, alt: "facebook.com"}
-        .m-b_2
-          %a{href: "#"}
-            %img{src: "/assets/images/blank.gif", class: "sprites __socialbtn __vk fa-t", width: 210, height: 40, alt: "vk.com"}
-        .m-b_2
-          %a{href: "#"}
-            %img{src: "/assets/images/blank.gif", class: "sprites __socialbtn __ok fa-t", width: 210, height: 40, alt: "odnoklassniki.ru"}
-        %a{href: "#"}
-          %img{src: "/assets/images/blank.gif", class: "sprites __socialbtn __mail fa-t", width: 210, height: 40, alt: "mail.ru"}
+        = haml '/dialogs/_social'.to_sym

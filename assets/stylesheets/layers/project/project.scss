@@ -33,8 +33,10 @@
         &::after {
           color: $major-color;
           content: '\f078';
-          font-size: 8px;
-          font-family: FontAwesome;
+          font: {
+            family: FontAwesome;
+            size: 8px;
+          }
           margin-left: 5px;
         }
       }
@@ -46,15 +48,19 @@
       width: 120px;
     }
     &.__contacts {
-      font-size: 16px;
-      font-weight: 700;
+      font: {
+        size: 16px;
+        weight: 700;
+      }      
       text-transform: uppercase;
       position: relative;
       width: 480px;
       &::after {
         content: '\f078';
-        font-size: 12px;
-        font-family: FontAwesome;
+        font: {
+          family: FontAwesome;
+          size: 12px;
+        }        
         position: absolute;
         top: 50%;
         right: 20px;
@@ -112,9 +118,11 @@
       //
       .dropdown {
         background-color: #fff;
-        border-right:  1px solid #e1e1e1;
-        border-bottom: 1px solid #e1e1e1;
-        border-left:   1px solid #e1e1e1;
+        border: {
+          right:  1px solid #e1e1e1;
+          bottom: 1px solid #e1e1e1;
+          left:   1px solid #e1e1e1;
+        }                
         box-shadow: 0 0 15px 5px rgba(0, 0, 0, .1);
         cursor: default;
         display: none;
@@ -194,8 +202,10 @@
       }
     }
     &.__basket {
-      border-right: 1px solid transparent;
-      border-left:  1px solid $muted-color;
+      border: {
+        right: 1px solid transparent;
+        left:  1px solid $muted-color;
+      }      
       width: 320px;
       &:hover {
         border-right: 1px solid $muted-color;
@@ -205,8 +215,10 @@
   }
     .header_i_a {
       color: $link-color-hover;
-      font-size: 13px;
-      font-weight: 700;
+      font: {
+        size: 13px;
+        weight: 700;
+      }      
       line-height: 20px;
       text-transform: uppercase;
       &.__pseudo {border-color: $link-color-hover !important;}
@@ -247,9 +259,11 @@
         > ul {display: block !important;}
         &::before {
           content: '';
-          border-left:  7px solid transparent;
-          border-right: 7px solid transparent;
-          border-top:   7px solid $major-color;
+          border: {
+            top:   7px solid $major-color;
+            right: 7px solid transparent;
+            left:  7px solid transparent;
+          }
           height: 0;
           width: 0;
           position: absolute;
@@ -264,8 +278,10 @@
     .menu_i_a {
       color: #fff;
       display: inline-block;
-      font-size: 14px;
-      font-weight: 600;
+      font: {
+        size: 14px;
+        weight: 600;
+      }      
       height: 50px;
       line-height: 50px;
       padding: 0 20px;
@@ -307,8 +323,10 @@
     }
     > ul > li > a {
       display: block;
-      font-size: 13px;
-      font-weight: 700;
+      font: {
+        size: 13px;
+        weight: 700;
+      }      
       line-height: 15px;
       padding: 12px 60px 12px 30px;
       position: relative;
@@ -323,9 +341,11 @@
         left: 30px;
       }
       &::after {
-        border-top:    7px solid transparent;
-        border-left:   7px solid #fff;
-        border-bottom: 7px solid transparent;
+        border: {
+          top:    7px solid transparent;
+          left:   7px solid #fff;
+          bottom: 7px solid transparent;
+        }
         content: '';
         display: none;
         position: absolute;
@@ -371,8 +391,10 @@
     > ul > li > ul > li > a {
       color: #fff;
       display: block;
-      font-size: 14px;
-      font-weight: 600;
+      font: {
+        size: 14px;
+        weight: 600;
+      }
       line-height: 15px;
       padding: 12px 30px;
       position: relative;
@@ -386,8 +408,10 @@
         left: 30px;
       }
       &::after {
-        border-top:    7px solid transparent;
-        border-left:   7px solid #3d3d3d;
+        border: {
+          top:    7px solid transparent;
+          left:   7px solid #3d3d3d;
+        }
         border-bottom: 7px solid transparent;
         content: '';
         display: none;
@@ -403,9 +427,11 @@
       }
     }
     > ul > li > ul > li > div {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background: {
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+      }
       display: none;
       position: absolute;
       top: 0;
@@ -438,8 +464,10 @@
   .search_submit {
     background-color: #e7e7e7;
     border-left: 1px solid $muted-color;
-    font-size: 12px;
-    font-weight: 700;
+    font: {
+      size: 12px;
+      weight: 700;
+    }
     height: 34px;
     text-transform: uppercase;
     vertical-align: middle;
@@ -515,8 +543,10 @@
     }
     > ul > li > a {
       display: block;
-      font-size: 13px;
-      font-weight: 700;
+      font: {
+        size: 13px;
+        weight: 700;
+      }
       line-height: 15px;
       padding: 12px 60px 12px 30px;
       position: relative;
@@ -531,9 +561,11 @@
         left: 30px;
       }
       &::after {
-        border-top:    7px solid transparent;
-        border-left:   7px solid #fff;
-        border-bottom: 7px solid transparent;
+        border: {
+          top:    7px solid transparent;
+          left:   7px solid #fff;
+          bottom: 7px solid transparent;
+        }
         content: '';
         display: none;
         position: absolute;
@@ -574,8 +606,10 @@
     > ul > li > ul > li > a {
       color: #fff;
       display: block;
-      font-size: 14px;
-      font-weight: 600;
+      font: {
+        size: 14px;
+        weight: 600;
+      }
       line-height: 15px;
       padding: 12px 30px;
       position: relative;
@@ -589,9 +623,11 @@
         left: 30px;
       }
       &::after {
-        border-top:    7px solid transparent;
-        border-left:   7px solid #3d3d3d;
-        border-bottom: 7px solid transparent;
+        border: {
+          top:    7px solid transparent;
+          left:   7px solid #3d3d3d;
+          bottom: 7px solid transparent;
+        }
         content: '';
         display: none;
         position: absolute;
@@ -606,9 +642,11 @@
       }
     }
     > ul > li > ul > li > div {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background: {
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+      }
       display: none;
       position: absolute;
       top: 0;
@@ -649,8 +687,10 @@
     &.__badge {
       &::before {
         color: #fff;
-        font-size: 10px;
-        font-weight: 700;
+        font: {
+          size: 10px;
+          weight: 700;
+        }
         height: 20px;
         line-height: 20px;
         padding: 0 16px 0 7px;
@@ -723,8 +763,10 @@
       text-align: center;
     }
     .item_caption {
-      font-size: 12px;
-      font-weight: 600;
+      font: {
+        size: 12px;
+        weight: 600;
+      }
       line-height: 18px;
       text-transform: uppercase;
       a {color: #333;}
@@ -740,12 +782,16 @@
         text-decoration: line-through;
       }
       .item_price_new {
-        font-size: 22px;
-        font-weight: 700;
+        font: {
+          size: 22px;
+          weight: 700;
+        }
         line-height: 18px;
         span {
-          font-size: 13px;
-          font-weight: 600;
+          font: {
+            size: 13px;
+            weight: 600;
+          }
         }
       }
 
@@ -773,8 +819,10 @@
       &:not(:last-child) {margin-bottom: 3px;}
       .form_label {
         color: #fff;
-        font-size: 13px;
-        font-weight: 700;
+        font: {
+          size: 13px;
+          weight: 700;
+        }
         text-transform: uppercase;
       }
         .form_checkbox.form_el.__fake {
@@ -788,8 +836,10 @@
     .filter_block_t {
       border-bottom: 3px solid #e2e2e2;
       cursor: pointer;
-      font-size: 16px;
-      font-weight: 700;
+      font: {
+        size: 16px;
+        weight: 700;
+      }
       line-height: 1;
       padding: 15px 0;
       position: relative;
@@ -818,8 +868,10 @@
       }
         .filter_accordion_i_t {
           cursor: pointer;
-          font-size: 13px;
-          font-weight: 600;
+          font: {
+            size: 13px;
+            weight: 600;
+          }
           line-height: 40px;
           text-transform: uppercase;
           .fa {
@@ -928,8 +980,10 @@
       margin: 0 0 20px 29px;
       li {
         display: inline-block;
-        font-size: 16px;
-        font-weight: 700;
+        font: {
+          size: 16px;
+          weight: 700;
+        }
         line-height: 17px;
         margin-right: 30px;
         text-transform: uppercase;
@@ -974,14 +1028,18 @@
     text-align: center;
   }
     .site-map_toggle_a {
-      font-size: 12px;
-      font-weight: 700;
+      font: {
+        size: 12px;
+        weight: 700;
+      }
       line-height: 1;
       text-transform: uppercase;
       &::after {
         content: '\f078';
-        font-size: 10px;
-        font-family: FontAwesome;
+        font: {
+          size: 10px;
+          family: FontAwesome;
+        }
         margin-left: 10px;
         position: relative;
         top: -2px;
@@ -1063,8 +1121,10 @@
 
     }
     &.__links {
-      font-size: 12px;
-      font-weight: 400;
+      font: {
+        size: 12px;
+        weight: 400;
+      }
       line-height: 20px;
       text-transform: none;
       a {
@@ -1101,8 +1161,10 @@
       padding-left: 70px;
     }
       .authorized_user_name {
-        font-size: 14px;
-        font-weight: 600;
+        font: {
+          size: 14px;
+          weight: 600;
+        }
         line-height: 16px;
         margin-bottom: 5px;
       }
@@ -1180,8 +1242,10 @@
   font-size: 12px;
   height: 40px;
   line-height: 40px;
-  text-align: center;
-  text-transform: uppercase;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
   @include linear-gradient(horizontal, #e62368, #f60c40);
   &:hover {color: #fff;}
   .ico {
@@ -1270,8 +1334,10 @@
         &:not(:last-child) {margin-right: 25px;}
       }
         .footer_nav_i_a {
-          font-size: 14px;
-          font-weight: 700;
+          font: {
+            size: 14px;
+            weight: 700;
+          }
           text-transform: uppercase;
         }
 
