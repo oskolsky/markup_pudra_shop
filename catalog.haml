@@ -8,8 +8,20 @@
         %aside.grid-i.__grid-3
           = haml "/views/common/catalog/_filter".to_sym
         %section.grid-i.__grid-9
-          .m-b_2
+          .m-b_3
             = haml "/views/common/banners/_catalog".to_sym
+          .m-b_3
+            .grid
+              .grid-i.__grid-5
+                .p-l_2
+                  %span.tx.__s.fw-600 Сортировать по:
+                  %ul.sorting
+                    %li.sorting_i
+                      %a.a.__pseudo.__inner.sorting_i_a.__current{href: "#"}
+                        %span Рейтингу
+                    %li.sorting_i
+                      %a.a.__pseudo.__inner.sorting_i_a{href: "#"} 
+                        %span Цене
           .layer.p-t_2.p-r_2.p-b_2.p-l_2
             #feed
               = haml "/views/common/catalog/_feed".to_sym

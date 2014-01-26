@@ -1254,6 +1254,32 @@
   }
 }
 
+//
+// .. Sorting
+//
+.sorting {
+  display: inline-block;
+  margin-left: 20px;
+}
+  .sorting_i {
+    display: inline-block;
+    &:not(:last-child) {margin-right: 20px;}
+  }
+    .sorting_i_a {
+      position: relative;
+      &::after {
+        margin-left: 5px;
+        content: "\f078";
+        font: {
+          family: FontAwesome;
+          size: 10px; 
+        }
+      }
+      &.__current {
+        &::after {content: "\f077";}
+      }
+    }
+
 
 
 //****************************************************************************************************
