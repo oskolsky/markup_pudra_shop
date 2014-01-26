@@ -967,6 +967,18 @@
   }
 }
 
+// .. Banners
+.imageslider.__banners {
+  overflow: hidden;
+  height: 200px;
+  .slider-nav {
+    position: absolute;
+    right: 10px;
+    bottom: 35px;
+    z-index: 999;
+  }
+}
+
 
 
 //****************************************************************************************************
