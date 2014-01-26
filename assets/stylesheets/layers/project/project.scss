@@ -1233,29 +1233,6 @@
   }
 
 //
-// .. LOAD MORE
-//
-.load {
-  @include linear-gradient(horizontal, #e62368, #f60c40);
-  display: block;
-  height: 40px;
-  background-color: #eb1c5c;
-  color: #fff;
-  font-size: 12px;
-  line-height: 40px;
-  text: {
-    transform: uppercase;
-    align: center;
-  }
-  &:hover {color: #fff;}
-  .ico {
-    position: relative;
-    top: 2px;
-    margin-left: 30px;
-  }
-}
-
-//
 // .. Hr
 //
 .hr {

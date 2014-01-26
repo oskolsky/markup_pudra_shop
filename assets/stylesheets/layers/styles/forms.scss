@@ -26,20 +26,39 @@ input {
 .form_button {
   @include prefixes(box-sizing, border-box);
   @include linear-gradient(horizontal, #e62368, #f60c40);
-  padding: 0 20px;
+  display: inline-block;
   border: none;
-  border-radius: 15px;
+  background-color: #eb1c5c;
   color: #fff;
-  text-transform: uppercase;
   font-size: $form-el-font-size;
   line-height: $form-el-line-height;
+  padding: 0 15px;
   cursor: pointer;
+  text: {
+    transform: uppercase;
+    align: center;
+  }
   //&:not([disabled]):hover {box-shadow: inset 0 0 .3em rgba(0, 0, 0, .1);}
   //&:not([disabled]):active { @include linear-gradient(vertical, #ddd, #eee); }
+  &.__rounded {  border-radius: 15px;}
+  &.__m {
+    height: 30px;
+    line-height: 30px;  
+  }
+  &.__l {
+    height: 40px;
+    line-height: 40px;  
+  }
+  .ico {
+    position: relative;
+    top: 2px;
+    margin-left: 30px;
+  } 
 }
 a.form_button {
   @include prefixes(transition, none);
   text-decoration: none;
+  &:hover {color: #fff;}
 }
 
 //
