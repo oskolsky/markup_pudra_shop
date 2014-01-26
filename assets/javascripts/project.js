@@ -1,5 +1,46 @@
 //****************************************************************************************************
 //
+// .. INIT
+//
+//****************************************************************************************************
+//
+// .. ACCOUNTING
+//
+accounting.settings = {
+  currency: {
+    decimal: '.',
+    thousand: ' ',
+    precision: 0
+  },
+  number: {
+    decimal : '.',
+    thousand: ' ',
+    precision: 0
+  }
+};
+
+//
+// .. ARCTICMODAL
+//
+$.arcticmodal('setDefault', {
+  overlay: {
+    css: {
+      backgroundColor: '#272727',
+      opacity: .5
+    }
+  },
+  openEffect: {
+    speed: 200
+  },
+  closeEffect: {
+    speed: 200
+  }
+});
+
+
+
+//****************************************************************************************************
+//
 // .. EVENTS
 //
 //****************************************************************************************************
@@ -36,31 +77,16 @@ $(document).on('click touchstart', '.js-dialog_close', function() {
 //
 //****************************************************************************************************
 $(function() {
-  
+
+  //
+  // .. FOOTER
+  //
   $('#footer').stickyFooter();
 
   //
   // .. SCROLL WIDTH
   //
   scrollWidth();
-
-  //
-  // .. ARCTICMODAL
-  //
-  $.arcticmodal('setDefault', {
-    overlay: {
-      css: {
-        backgroundColor: '#272727',
-        opacity: .5
-      }
-    },
-    openEffect: {
-      speed: 200
-    },
-    closeEffect: {
-      speed: 200
-    }
-  });
 
   //
   // .. HOME NAVIGATION
@@ -121,6 +147,36 @@ $(function() {
         $(this).siblings('.filter_accordion_i_b').slideUp();
         $(this).removeClass('__open');
       }
+    });
+  });
+
+  //
+  // .. Range 
+  //
+  $('.range').each(function() {
+    var _this = this;
+    $(this).find('.range_slider').slider({
+      range: true,
+      min:     $(_this).data('min'),
+      max:     $(_this).data('max'),
+      step:    $(_this).data('step'),
+      values: [$(_this).data('min'), $(_this).data('max')],
+      slide: function(event, ui) {
+        $(_this).find('.range_input.__min').val(ui.values[0]);
+        $(_this).find('.range_input.__max').val(ui.values[1]);
+        $(_this).find('.range_amount.__min').text(ui.values[0]);
+        $(_this).find('.range_amount.__max').text(ui.values[1]);
+        $(_this).find('.range_amount').each(function() {
+          bindAccountingNumber( $(this) );
+        });
+      }
+    });
+    $(_this).find('.range_input.__min').val( $(_this).find('.range_slider').slider('values', 0) );
+    $(_this).find('.range_input.__max').val( $(_this).find('.range_slider').slider('values', 1) );
+    $(_this).find('.range_amount.__min').text( $(_this).find('.range_slider').slider('values', 0) );
+    $(_this).find('.range_amount.__max').text( $(_this).find('.range_slider').slider('values', 1) );
+    $(_this).find('.range_amount').each(function() {
+      bindAccountingNumber( $(this) );
     });
   });
 
@@ -187,34 +243,14 @@ $(function() {
 
   });
 
-  //
-  // .. ACCOUNTING
-  //
-  accounting.settings = {
-    currency: {
-      decimal: '.',
-      thousand: ' ',
-      precision: 0
-    },
-    number: {
-      decimal : '.',
-      thousand: ' ',
-      precision: 0
-    }
-  };
-
   // .. Number
   $('.format-number').each(function() {
-    var
-      number = parseInt($(this).text()),
-      formatNumber = accounting.formatNumber(number);
-
-    $(this).text(formatNumber);
+    bindAccountingNumber( $(this) );
   });
 
   // .. Money
   $('.format-money').each(function() {
-    bindAccounting($(this));
+    bindAccountingMoney( $(this) );
   });
 
 
@@ -257,7 +293,15 @@ $(window).load(function() {});
 // .. FUNCTION
 //
 //****************************************************************************************************
-function bindAccounting($el) {
+function bindAccountingNumber($el) {
+  var
+    number = parseInt($el.text()),
+    formatNumber = accounting.formatNumber(number);
+
+  $el.text(formatNumber);
+}
+
+function bindAccountingMoney($el) {
   var c = accounting.settings.currency;
 
   if ($el.hasClass('__rub')) {
