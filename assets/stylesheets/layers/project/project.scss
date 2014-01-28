@@ -661,6 +661,62 @@
 
 //****************************************************************************************************
 //
+// .. ARTICLE
+//
+//****************************************************************************************************
+.article {
+  position: relative;
+  &.__ttb {
+    .article_footer {left: 0;}
+  }
+  &.__ltr {
+    .article_footer {right: 0;}
+  }
+  &.__rtl {
+    .article_footer {left: 0;}
+  }
+  > .grid {margin-bottom: 0;}
+} 
+  .article_header {
+    height: 214px;
+  }
+  .article_body {
+    height: 214px;
+  }
+  .article_footer {
+    position: absolute;
+    bottom: 20px;
+    width: 300px;
+    background-color: #fff;
+    padding: 8px 0 6px;
+    ul {
+      display: inline-block;
+      vertical-align: middle;
+      li {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 11px;
+        color: #272727;
+        &:not(:last-child) {margin-right: 20px;}
+        span, i {
+          vertical-align: middle;
+        }
+        i {margin-right: 5px;}
+      }
+    }
+  }
+    .article_footer_more {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      text-decoration: underline;
+      @include prefixes(transform, translate(0, -50%));
+    }
+
+
+
+//****************************************************************************************************
+//
 // .. ITEM
 //
 //****************************************************************************************************

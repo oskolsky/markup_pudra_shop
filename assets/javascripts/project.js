@@ -122,6 +122,12 @@ $(function() {
   $('.items').find('.item').resizeToMaxHeight();
 
   //
+  // .. ARTICLES
+  //
+  // $('.article > .grid > .grid-i').resizeToMaxHeight();
+
+
+  //
   // .. SITE MAP
   //
   $('#site-map').find('.site-map_toggle_a').click(function() {

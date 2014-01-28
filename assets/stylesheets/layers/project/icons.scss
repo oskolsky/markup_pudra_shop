@@ -28,6 +28,13 @@
     &.__mail  {background-position: -16px 0;}
     &.__skype {background-position: -32px 0;}
   }
+  &.__17 {
+    @include size(17, 17);
+    background-image: url(/assets/images/icons/ico-17.png);
+    &.__eye      {background-position: 0 0;}
+    &.__like     {background-position: -17px 0;}
+    &.__comments {background-position: -34px 0;}
+  }
   &.__20 {
     @include size(20, 20);
     background-image: url(/assets/images/icons/ico-20.png);

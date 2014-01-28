@@ -2,82 +2,98 @@
   .ctn
     .p-t_4
 
-      %nav.home-nav.m-b_3
-        = haml '/views/common/_catalogs'.to_sym
-        .d-ib.va-t
-          .imageslider.__promo
-            .slider
-              - 1.upto(3) do
-                %a.slide{href: "#"}
-                  %img{src: "/assets/images/fake/promo_#{rand(2..3)}.jpg", width: "660", height: "360", alt: ""}
-            %ul.slider-nav
+      .m-b_3
+        %nav.home-nav
+          = haml '/views/common/_catalogs'.to_sym
+          .d-ib.va-t
+            .imageslider.__promo
+              .slider
+                - 1.upto(3) do
+                  %a.slide{href: "#"}
+                    %img{src: "/assets/images/fake/promo_#{rand(2..3)}.jpg", width: "660", height: "360", alt: ""}
+              %ul.slider-nav
 
-      #tabs.tabs.__catalog.m-b_4
-        %ul
-          %li
-            %a.a.__pseudo{href: "#news"} Новинки
-          %li
-            %a.a.__pseudo{href: "#stock"} Акции
-          %li
-            %a.a.__pseudo{href: "#hit"} Лидеры продаж
-          %li
-            %a.a.__pseudo{href: "#order"} Под заказ
-        #news
-          .layer
-            .iosslider.__catalog
-              .slider
-                - 1.upto(5) do
-                  .slide
-                    .items
-                      - 1.upto(4) do
-                        = haml '/views/common/item/_item_new'.to_sym
-              %ul.slider-nav
-                %li.slider-nav_i.__current
-                - 1.upto(4) do
-                  %li.slider-nav_i
-              %a.slider-more{href: "/catalog"} Все новинки
-        #stock
-          .layer
-            .iosslider.__catalog
-              .slider
-                - 1.upto(5) do
-                  .slide
-                    .items
-                      - 1.upto(4) do
-                        = haml '/views/common/item/_item_stock'.to_sym
-              %ul.slider-nav
-                %li.slider-nav_i.__current
-                - 1.upto(4) do
-                  %li.slider-nav_i
-              %a.slider-more{href: "/catalog"} Все акции
-        #hit
-          .layer
-            .iosslider.__catalog
-              .slider
-                - 1.upto(5) do
-                  .slide
-                    .items
-                      - 1.upto(4) do
-                        = haml '/views/common/item/_item_hit'.to_sym
-              %ul.slider-nav
-                %li.slider-nav_i.__current
-                - 1.upto(4) do
-                  %li.slider-nav_i
-              %a.slider-more{href: "/catalog"} Все лидеры продаж
-        #order
-          .layer
-            .iosslider.__catalog
-              .slider
-                - 1.upto(5) do
-                  .slide
-                    .items
-                      - 1.upto(4) do
-                        = haml '/views/common/item/_item_order'.to_sym
-              %ul.slider-nav
-                %li.slider-nav_i.__current
-                - 1.upto(4) do
-                  %li.slider-nav_i
-              %a.slider-more{href: "/catalog"} Все под заказ
+      .m-b_3
+        #tabs.tabs.__catalog
+          %ul
+            %li
+              %a.a.__pseudo{href: "#news"} Новинки
+            %li
+              %a.a.__pseudo{href: "#stock"} Акции
+            %li
+              %a.a.__pseudo{href: "#hit"} Лидеры продаж
+            %li
+              %a.a.__pseudo{href: "#order"} Под заказ
+          #news
+            .layer
+              .iosslider.__catalog
+                .slider
+                  - 1.upto(5) do
+                    .slide
+                      .items
+                        - 1.upto(4) do
+                          = haml '/views/common/item/_item_new'.to_sym
+                %ul.slider-nav
+                  %li.slider-nav_i.__current
+                  - 1.upto(4) do
+                    %li.slider-nav_i
+                %a.slider-more{href: "/catalog"} Все новинки
+          #stock
+            .layer
+              .iosslider.__catalog
+                .slider
+                  - 1.upto(5) do
+                    .slide
+                      .items
+                        - 1.upto(4) do
+                          = haml '/views/common/item/_item_stock'.to_sym
+                %ul.slider-nav
+                  %li.slider-nav_i.__current
+                  - 1.upto(4) do
+                    %li.slider-nav_i
+                %a.slider-more{href: "/catalog"} Все акции
+          #hit
+            .layer
+              .iosslider.__catalog
+                .slider
+                  - 1.upto(5) do
+                    .slide
+                      .items
+                        - 1.upto(4) do
+                          = haml '/views/common/item/_item_hit'.to_sym
+                %ul.slider-nav
+                  %li.slider-nav_i.__current
+                  - 1.upto(4) do
+                    %li.slider-nav_i
+                %a.slider-more{href: "/catalog"} Все лидеры продаж
+          #order
+            .layer
+              .iosslider.__catalog
+                .slider
+                  - 1.upto(5) do
+                    .slide
+                      .items
+                        - 1.upto(4) do
+                          = haml '/views/common/item/_item_order'.to_sym
+                %ul.slider-nav
+                  %li.slider-nav_i.__current
+                  - 1.upto(4) do
+                    %li.slider-nav_i
+                %a.slider-more{href: "/catalog"} Все под заказ
+
+      .m-b_3
+        .grid
+          .grid-i.__grid-6
+            %h2.tx.__upper Журнал
+          .grid-i.__grid-6.c-bg.__red 1
+
+      .m-b_1
+        .grid
+          .grid-i.__grid-4
+            = haml '/views/common/article/_item_ttb'.to_sym
+          .grid-i.__grid-8
+            = haml '/views/common/article/_item_rtl'.to_sym
+            = haml '/views/common/article/_item_ltr'.to_sym
 
       .grid
         .grid-i.__grid-4
