@@ -21,20 +21,22 @@
             %a{href: "#", data: {dialog: "true", url: "/dialogs/_register"}} Регистрация
           %li
             %a{href: "#", data: {dialog: "true", url: "/dialogs/_forgot"}} Восстановление пароля
+          %li
+            %a{href: "#", class: "tx __color __muted", data: {dialog: "true", url: "/dialogs/_item"}} Предварительный просмотр товара
 
       .m-b_3
         %p.m-b_2
           %b Страницы:
         %ol
           %li
-            %a{href: "/"} Главная
+            %a{href: "/", class: "tx __color __muted"} Главная
           %li
             %a{href: "/catalog"} Каталог товаров
           %li
-            %a{href: "/catalog_show"} Страница товара
+            %a{href: "/catalog_show", class: "tx __color __muted"} Страница товара
           %li
-            %a{href: "/basket"} Корзина
+            %a{href: "/basket", class: "tx __color __muted"} Корзина
           %li
-            %a{href: "/checkout"} Оформление заказа
+            %a{href: "/checkout", class: "tx __color __muted"} Оформление заказа
           %li
-            %a{href: "/payment"} Оплата
+            %a{href: "/payment", class: "tx __color __muted"} Оплата
