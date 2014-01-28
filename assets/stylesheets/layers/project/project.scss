@@ -677,13 +677,17 @@
     background-color: #fff;
     vertical-align: top;
     &:not(:last-child) {margin-right: 14px;}
-    &:hover {
+    
+    &:hover, &.__hover {
       border-color: #fa1951;
       box-shadow: inset 0 0 0 4px #fa1951;
       &.__badge {
         &::before, &::after {display: none;}
       }
+      .item_price, .item_caption {display: none;}
+      .item_like, .item_more {display: block;}
     }
+    
     &.__badge {
       &::before {
         position: absolute;
@@ -746,7 +750,7 @@
       }
     }
   }
-    .item_name {
+    .item_brand {
       margin-bottom: 10px;
       a {
         color: $link-color-hover;
@@ -770,6 +774,50 @@
         weight: 600;
       }
       a {color: #333;}
+    }
+    .item_like {
+      @include prefixes(box-sizing, border-box);
+      position: relative;
+      position: absolute;
+      right: 4px;
+      bottom: 29px;
+      left: 4px;
+      display: none;
+      padding: 5px 0;
+      height: 80px;    
+      border-top: 1px solid #e3e3e3;
+      text-align: center;
+    }
+      .item_like_i {
+        &:not(:last-child) {margin-bottom: 10px;}
+        a {
+          &:hover {
+            .ico {
+              @extend .ico.__20.__like.__hover;
+            }
+          }
+        }
+      }
+        .item_like_raty {
+          display: inline-block;
+        }
+    .item_more {
+      position: absolute;
+      right: -1px;
+      bottom: -1px;
+      left: -1px;
+      display: none;
+      height: 30px;
+      background-color: #fa1951;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 30px;
+      font: {
+        size: 12px;
+        weight: 600;
+      }
+      a {color: inherit;}
     }
     .item_price {
       position: absolute;

@@ -1,12 +1,20 @@
 - hash = rand(9999)
 %article.item.__badge.__stock
-  %header.item_name
+  %header.item_brand
     %a{href: "/catalog_show#{hash}"} Max Factor
   .item_photo
     %a{href: "/catalog_show#{hash}"}
       %img.va-t{src: "/assets/images/fake/item_#{rand(1..9)}.jpg", width: 130, height: 120, alt: "Подтягивающий концентрат для лица Hydro Active Lifting"}
   .item_caption
     %a{href: "/catalog_show#{hash}"} Подтягивающий концентрат для лица Hydro Active Lifting
+  .item_like
+    .item_like_i
+      .item_like_raty
+    .item_like_i
+      %a{href: "#"}
+        %i.ico.__20.__like
+  .item_more
+    %a{href: "/catalog_show#{hash}"} Подробнее
   %footer.item_price
     .item_price_old.format-money.__rub 121000
     .item_price_new.format-money.__rub 115000

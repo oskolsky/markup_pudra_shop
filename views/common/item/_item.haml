@@ -1,12 +1,20 @@
 - hash = rand(9999)
 %article.item
-  %header.item_name
+  %header.item_brand
     %a{href: "/catalog_show#{hash}"} Relouis
   .item_photo
     %a{href: "/catalog_show#{hash}"}
       %img.va-t{src: "/assets/images/fake/item_#{rand(1..9)}.jpg", width: 130, height: 120, alt: "Микронизированные компактные румяна La Mia Italia"}
   .item_caption
     %a{href: "/catalog_show#{hash}"} Микронизированные компактные румяна La Mia Italia
+  .item_like
+    .item_like_i
+      .item_like_raty
+    .item_like_i
+      %a{href: "#"}
+        %i.ico.__20.__like
+  .item_more 
+    %a{href: "/catalog_show#{hash}"} Подробнее
   %footer.item_price
     .item_price_new.format-money.__rub
       = rand(10000..20000)

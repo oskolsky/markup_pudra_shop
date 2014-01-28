@@ -45,7 +45,7 @@ $.arcticmodal('setDefault', {
 //
 //****************************************************************************************************
 //
-// .. Open dialog
+// .. OPEN DIALOG
 //
 $(document).on('click touchstart', '[data-dialog="true"]', function() {
   var url = $(this).data('url');
@@ -63,7 +63,7 @@ $(document).on('click touchstart', '[data-dialog="true"]', function() {
 });
 
 //
-// .. Close dialog
+// .. CLOSE DIALOG
 //
 $(document).on('click touchstart', '.js-dialog_close', function() {
   $.arcticmodal('close');
@@ -87,6 +87,26 @@ $(function() {
   // .. SCROLL WIDTH
   //
   scrollWidth();
+
+  //
+  // .. DOUBLE HOVER
+  //
+  doubleHover('a.double-hover', 'hover');
+
+  //
+  // .. FORMS
+  // .. $('#checkbox').customForm() to init single element; $('body').customForm() to init all elements  
+  //
+  $('.form').customForm();
+
+  //
+  // .. STAR RATY
+  // .. http://wbotelhos.com/raty
+  //
+  $('.item_like_raty').raty({
+    starOff: '/assets/images/star-off.png',
+    starOn : '/assets/images/star-on.png'
+  });
 
   //
   // .. HOME NAVIGATION
@@ -151,7 +171,7 @@ $(function() {
   });
 
   //
-  // .. Range 
+  // .. RANGE 
   //
   $('.range').each(function() {
     var _this = this;
@@ -181,24 +201,12 @@ $(function() {
   });
 
   //
-  // .. DOUBLE HOVER
-  //
-  doubleHover('a.double-hover', 'hover');
-
-  //
-  // .. FORMS
-  //
-  $('.form').customForm(); // $('#checkbox').customForm() to init single element; $('body').customForm() to init all elements
-
-  //
   // .. SCROLL TO
   //
   $('a[data-scroll="true"]').on('click touchstart', function() {
     var      anchor = $(this).attr('href'),
         destination = $(anchor).offset().top;
-    
     $('html, body').animate({scrollTop: destination}, 500);
-    
     return false;
   });
   
@@ -231,7 +239,7 @@ $(function() {
         args.sliderObject.find('.slide').css({height: ''}).resizeToMaxHeight();
         args.sliderObject.closest('.iosslider').css({height: h + 'px'});
         // todo: купить слайдер
-        $('.iosslider').find('i').remove();
+        $('.iosslider').find('.slider-more').next('i').remove();
       },
       onSlideStart: function(args) {
         args.sliderObject.closest('.iosslider').find('.slider-nav').find('.slider-nav_i').removeClass('__current');

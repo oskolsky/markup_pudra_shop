@@ -34,6 +34,8 @@
     &.__user         {background-position: 0 0;}
     &.__user.__hover {background-position: 0 -20px;}
     &.__times        {background-position: -20px 0;}
+    &.__like         {background-position: -40px 0;}
+    &.__like.__hover {background-position: -40px -20px;}
   }
   &.__24 {
      @include size(24, 24);

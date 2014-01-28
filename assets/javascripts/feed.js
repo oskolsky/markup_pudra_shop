@@ -20,6 +20,10 @@ $(function() {
               $moreBlocks.find('.format-money').each(function() {
                 bindAccountingMoney($(this));
               });
+              $moreBlocks.find('.item_like_raty').raty({
+                starOff: '/assets/images/star-off.png',
+                starOn : '/assets/images/star-on.png'
+              });
               $feed.append( $moreBlocks );
               $('.items').find('.item').removeAttr('style').resizeToMaxHeight();
             } else {
