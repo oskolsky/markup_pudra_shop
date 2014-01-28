@@ -1,0 +1,21 @@
+.grid
+  .grid-i.__grid-5.va-m
+    .p-l_2
+      %span.tx.__s.fw-600 Сортировать по:
+      %ul.sorting
+        %li.sorting_i
+          %a.a.__pseudo.__inner.sorting_i_a.__current{href: "#"}
+            %span Рейтингу
+        %li.sorting_i
+          %a.a.__pseudo.__inner.sorting_i_a{href: "#"} 
+            %span Цене
+  .grid-i.__grid-4.va-m
+    .tx.__right
+      %span.tx.__xxs Min
+      .range{data: {min: 0, max: 100000, step: 1000}}
+        .range_amount.__min.tx.__xxs
+        .range_amount.__max.tx.__xxs
+        .range_slider
+        %input.range_input.__min{type: "hidden", value: "0", name: "min"}
+        %input.range_input.__max{type: "hidden", value: "0", name: "max"}
+      %span.tx.__xxs Max
