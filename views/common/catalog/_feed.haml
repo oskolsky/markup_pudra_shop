@@ -1,4 +1,15 @@
-- 1.upto(5) do
+- 1.upto(4) do
+  .items.m-b_2
+    - 1.upto(3) do
+      - partials = ['/views/common/item/_item', '/views/common/item/_item_new', '/views/common/item/_item_hit', '/views/common/item/_item_order', '/views/common/item/_item_stock']
+      - rand_partial_name = partials.sample
+      = haml rand_partial_name.to_sym
+%p.tx.__xs.__center.__upper.m-b_2 
+  %span.fw-600 Показано&nbsp; 
+  %span.fw-700 15 
+  %span.fw-600 &nbsp;товаров из&nbsp;
+  %span.fw-700 90
+- 1.upto(1) do
   .items.m-b_2
     - 1.upto(3) do
       - partials = ['/views/common/item/_item', '/views/common/item/_item_new', '/views/common/item/_item_hit', '/views/common/item/_item_order', '/views/common/item/_item_stock']
